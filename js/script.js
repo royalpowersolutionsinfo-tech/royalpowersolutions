@@ -307,3 +307,158 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     window.scrollTo({ top: target.offsetTop - navH, behavior: 'smooth' });
   });
 });
+
+/* ── 10. FAQ ACCORDION ────────────────────────────────────── */
+(function initFAQ() {
+  const items = document.querySelectorAll('.faq-item');
+  if (!items.length) return;
+
+  items.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    if (!question) return;
+
+    question.addEventListener('click', () => {
+      const isOpen = item.classList.contains('is-open');
+      // Close all others
+      items.forEach(i => i.classList.remove('is-open'));
+      // Toggle current
+      if (!isOpen) item.classList.add('is-open');
+    });
+  });
+})();
+
+/* ── 11. LIGHTBOX ─────────────────────────────────────────── */
+(function initLightbox() {
+  const galleryItems = document.querySelectorAll('.g-item');
+  if (!galleryItems.length) return;
+
+  // Build lightbox DOM if not already present
+  if (document.getElementById('lightbox')) return; // already exists
+
+  const lb = document.createElement('div');
+  lb.id = 'lightbox';
+  lb.className = 'lightbox';
+  lb.setAttribute('role', 'dialog');
+  lb.setAttribute('aria-modal', 'true');
+  lb.setAttribute('aria-label', 'Image viewer');
+  lb.innerHTML = `
+    <div class="lightbox__backdrop" id="lbBackdrop"></div>
+    <button class="lightbox__close" id="lbClose" aria-label="Close image viewer">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <button class="lightbox__nav lightbox__prev" id="lbPrev" aria-label="Previous image">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="lightbox__nav lightbox__next" id="lbNext" aria-label="Next image">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+    <div class="lightbox__inner">
+      <div class="lightbox__img-wrap">
+        <span class="lightbox__counter" id="lbCounter"></span>
+        <img class="lightbox__img" id="lbImg" src="" alt="">
+      </div>
+      <p class="lightbox__caption" id="lbCaption"></p>
+    </div>
+  `;
+  document.body.appendChild(lb);
+
+  const lbImg     = document.getElementById('lbImg');
+  const lbCaption = document.getElementById('lbCaption');
+  const lbCounter = document.getElementById('lbCounter');
+  const lbClose   = document.getElementById('lbClose');
+  const lbPrev    = document.getElementById('lbPrev');
+  const lbNext    = document.getElementById('lbNext');
+  const lbBackdrop= document.getElementById('lbBackdrop');
+
+  // Collect all gallery images
+  const images = [];
+  galleryItems.forEach(item => {
+    const img   = item.querySelector('img');
+    const label = item.querySelector('.g-item__label');
+    if (img) {
+      images.push({ src: img.src, caption: label ? label.textContent : '' });
+    }
+  });
+
+  let current = 0;
+
+  function openLightbox(index) {
+    current = (index + images.length) % images.length;
+    lbImg.src = images[current].src;
+    lbImg.alt = images[current].caption;
+    lbCaption.textContent = images[current].caption;
+    lbCounter.textContent = `${current + 1} / ${images.length}`;
+    lb.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
+  }
+
+  function closeLightbox() {
+    lb.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  // Click each gallery item to open
+  galleryItems.forEach((item, idx) => {
+    item.addEventListener('click', () => openLightbox(idx));
+  });
+
+  lbClose.addEventListener('click', closeLightbox);
+  lbBackdrop.addEventListener('click', closeLightbox);
+  lbPrev.addEventListener('click', () => openLightbox(current - 1));
+  lbNext.addEventListener('click', () => openLightbox(current + 1));
+
+  // Keyboard navigation
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('is-open')) return;
+    if (e.key === 'Escape')      closeLightbox();
+    if (e.key === 'ArrowLeft')   openLightbox(current - 1);
+    if (e.key === 'ArrowRight')  openLightbox(current + 1);
+  });
+
+  // Touch/swipe
+  let lbStartX = 0;
+  lb.addEventListener('touchstart', e => { lbStartX = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', e => {
+    const diff = lbStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) openLightbox(current + (diff > 0 ? 1 : -1));
+  });
+})();
+
+/* ── 12. GALLERY FILTER ───────────────────────────────────── */
+(function initGalleryFilter() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const items = document.querySelectorAll('.g-item[data-category]');
+  if (!filterBtns.length || !items.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      const cat = btn.getAttribute('data-filter');
+      items.forEach(item => {
+        if (cat === 'all' || item.getAttribute('data-category') === cat) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+})();
+
+/* ── 13. SCROLL-TO-TOP BUTTON ─────────────────────────────── */
+(function initScrollTop() {
+  const btn = document.getElementById('scrollTopBtn');
+  if (!btn) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) btn.classList.add('is-visible');
+    else                      btn.classList.remove('is-visible');
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+

@@ -55,11 +55,12 @@
         <span class="nav__brand-text">Royal Power <em>Solutions</em></span>
       </a>
       <nav class="nav__links" id="navLinks" aria-label="Primary navigation">
-        <a href="index.html"    class="nav-link">Home</a>
-        <a href="about.html"    class="nav-link">About Us</a>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
         <a href="services.html" class="nav-link">Services</a>
-        <a href="gallery.html"  class="nav-link">Gallery</a>
-        <a href="contact.html"  class="nav-link">Contact</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
       <div class="nav__actions">
         <a href="tel:+919787451828" class="btn btn--ghost-nav">
@@ -178,6 +179,41 @@
   </section>
 
   <!-- ============================================================
+       AMC BANNER
+  ============================================================ -->
+  <section style="padding: 0 0 20px; background: var(--bg-soft);">
+    <div class="container">
+      <div class="amc-banner" data-reveal>
+        <i class="fa-solid fa-bolt amc-banner__bolt" aria-hidden="true"></i>
+        <div>
+          <span class="amc-banner__badge">
+            <i class="fa-solid fa-shield-halved"></i> Annual Maintenance Contract
+          </span>
+          <h2>Keep your power systems running all year — worry-free.</h2>
+          <p>Our AMC packages are designed to eliminate downtime and extend the lifespan of your UPS, inverter, and battery systems. Get predictable service costs and priority support from our certified technicians.</p>
+          <div class="amc-banner__features">
+            <span class="amc-badge"><i class="fa-solid fa-check"></i> Scheduled preventive maintenance</span>
+            <span class="amc-badge"><i class="fa-solid fa-check"></i> Priority emergency response</span>
+            <span class="amc-badge"><i class="fa-solid fa-check"></i> Discounted spare parts</span>
+            <span class="amc-badge"><i class="fa-solid fa-check"></i> Detailed service reports</span>
+            <span class="amc-badge"><i class="fa-solid fa-check"></i> Dedicated support line</span>
+            <span class="amc-badge"><i class="fa-solid fa-check"></i> Battery health monitoring</span>
+          </div>
+        </div>
+        <div class="amc-banner__cta">
+          <a href="contact.html" class="btn btn--gold btn--lg">
+            <i class="fa-solid fa-file-contract"></i> Get AMC Quote
+          </a>
+          <a href="https://wa.me/919787451828?text=Hi%2C%20I%20am%20interested%20in%20AMC%20for%20my%20UPS%20system." target="_blank" rel="noopener" class="btn btn--outline" style="border-color:rgba(255,255,255,0.3);color:#fff;background:rgba(255,255,255,0.1);">
+            <i class="fa-brands fa-whatsapp"></i> Ask on WhatsApp
+          </a>
+          <p class="amc-banner__price">Starting from ₹2,999/year</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        PROCESS / HOW WE WORK
   ============================================================ -->
   <section class="process" id="work" aria-label="How we work — our process">
@@ -256,12 +292,15 @@
       </div>
 
       <div class="footer__col">
-        <h4>Services</h4>
-        <a href="services.html">Online UPS Sales</a>
-        <a href="services.html">Inverters &amp; Batteries</a>
-        <a href="services.html">Stabilizers &amp; Transformers</a>
-        <a href="services.html">Solar &amp; Electrical Panels</a>
-        <a href="services.html">UPS Commissioning</a>
+        <h4>Our Services</h4>
+        <a href="services/ups-sales-service.html">UPS Sales &amp; Service</a>
+        <a href="services/ups-repair-amc.html">UPS Repair &amp; AMC</a>
+        <a href="services/ups-installation.html">UPS Installation</a>
+        <a href="services/battery-sales-service.html">Battery Sales &amp; Service</a>
+        <a href="services/server-stabilizer.html">Server Stabilizers</a>
+        <a href="services/isolation-transformer.html">Isolation Transformers</a>
+        <a href="services/solar-installation.html">Solar Installation</a>
+        <a href="services/electrical-work.html">Electrical Work</a>
       </div>
 
       <div class="footer__col">
@@ -284,6 +323,9 @@
   <a href="https://wa.me/919787451828" target="_blank" rel="noopener noreferrer" class="fab-wa" aria-label="Chat with Royal Power Solutions on WhatsApp">
     <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
   </a>
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
   <script src="js/script.js"></script>
 </body>
 </html>

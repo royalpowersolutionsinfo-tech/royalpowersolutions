@@ -55,11 +55,12 @@
         <span class="nav__brand-text">Royal Power <em>Solutions</em></span>
       </a>
       <nav class="nav__links" id="navLinks" aria-label="Primary navigation">
-        <a href="index.html"    class="nav-link">Home</a>
-        <a href="about.html"    class="nav-link">About Us</a>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
         <a href="services.html" class="nav-link">Services</a>
-        <a href="gallery.html"  class="nav-link">Gallery</a>
-        <a href="contact.html"  class="nav-link">Contact</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
       <div class="nav__actions">
         <a href="tel:+919787451828" class="btn btn--ghost-nav">
@@ -88,25 +89,34 @@
   ============================================================ -->
   <section class="gallery" id="gallery" aria-label="Our recent work gallery" style="padding-top: 60px;">
     <div class="container">
+
+      <!-- Filter Tabs -->
+      <div class="gallery-filter" role="tablist" aria-label="Filter gallery by category">
+        <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">All Work</button>
+        <button class="filter-btn" data-filter="installation" role="tab" aria-selected="false">Installations</button>
+        <button class="filter-btn" data-filter="product" role="tab" aria-selected="false">Our Products</button>
+        <button class="filter-btn" data-filter="wiring" role="tab" aria-selected="false">Wiring &amp; Panels</button>
+      </div>
+
       <div class="gallery__grid">
 
-        <div class="g-item" data-reveal style="--i:0"><img src="assets/8a82b6ee-38ca-4d1b-8c0d-d1af9ec5d35e.jpg" alt="Our Work" loading="lazy"><span class="g-item__label">UPS Installation</span></div>
-        <div class="g-item" data-reveal style="--i:1"><img src="assets/112add4e-7ec5-4494-b476-7f0620022ec1.jpg" alt="Our Work" loading="lazy"><span class="g-item__label">Panel Wiring</span></div>
-        <div class="g-item" data-reveal style="--i:2"><img src="assets/975738f4-ac93-43ca-9d0d-5608ac4480f2.jpg" alt="Our Work" loading="lazy"><span class="g-item__label">Site Work</span></div>
-        <div class="g-item" data-reveal style="--i:3"><img src="assets/56956461-52f8-4649-89f2-4745d682c014.jpg" alt="Our Work" loading="lazy"><span class="g-item__label">Industrial Setup</span></div>
-        <div class="g-item" data-reveal style="--i:4"><img src="assets/89604179-7418-4c91-9942-3e025e19c875.jpg" alt="Our Work" loading="lazy"><span class="g-item__label">Office Wiring</span></div>
-        <div class="g-item" data-reveal style="--i:5"><img src="assets/adb8f832-5353-459c-9a50-91e4c3c81d31.jpg" alt="Our Work" loading="lazy"><span class="g-item__label">Battery Service</span></div>
-        
-        <div class="g-item" data-reveal style="--i:6"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.50%20PM.jpeg" alt="Product" loading="lazy"><span class="g-item__label">Our Product</span></div>
-        <div class="g-item" data-reveal style="--i:7"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.49%20PM.jpeg" alt="Product" loading="lazy"><span class="g-item__label">Our Product</span></div>
-        <div class="g-item" data-reveal style="--i:8"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.48%20PM.jpeg" alt="Product" loading="lazy"><span class="g-item__label">Our Product</span></div>
-        <div class="g-item" data-reveal style="--i:9"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.48%20PM%20(1).jpeg" alt="Product" loading="lazy"><span class="g-item__label">Our Product</span></div>
-        <div class="g-item" data-reveal style="--i:10"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.47%20PM.jpeg" alt="Product" loading="lazy"><span class="g-item__label">Our Product</span></div>
-        <div class="g-item" data-reveal style="--i:11"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.46%20PM.jpeg" alt="Product" loading="lazy"><span class="g-item__label">Our Product</span></div>
-        <div class="g-item" data-reveal style="--i:12"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.46%20PM%20(1).jpeg" alt="Product" loading="lazy"><span class="g-item__label">Our Product</span></div>
-        <div class="g-item" data-reveal style="--i:13"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.45%20PM.jpeg" alt="Product" loading="lazy"><span class="g-item__label">Our Product</span></div>
-        <div class="g-item" data-reveal style="--i:14"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.45%20PM%20(1).jpeg" alt="Product" loading="lazy"><span class="g-item__label">Our Product</span></div>
-        <div class="g-item" data-reveal style="--i:15"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.44%20PM.jpeg" alt="Product" loading="lazy"><span class="g-item__label">Our Product</span></div>
+        <div class="g-item" data-reveal style="--i:0" data-category="installation"><img src="assets/8a82b6ee-38ca-4d1b-8c0d-d1af9ec5d35e.jpg" alt="UPS Installation at client site" loading="lazy"><span class="g-item__label">UPS Installation</span></div>
+        <div class="g-item" data-reveal style="--i:1" data-category="wiring"><img src="assets/112add4e-7ec5-4494-b476-7f0620022ec1.jpg" alt="Electrical panel wiring work" loading="lazy"><span class="g-item__label">Panel Wiring</span></div>
+        <div class="g-item" data-reveal style="--i:2" data-category="installation"><img src="assets/975738f4-ac93-43ca-9d0d-5608ac4480f2.jpg" alt="Electrical site work" loading="lazy"><span class="g-item__label">Site Work</span></div>
+        <div class="g-item" data-reveal style="--i:3" data-category="installation"><img src="assets/56956461-52f8-4649-89f2-4745d682c014.jpg" alt="Industrial UPS setup" loading="lazy"><span class="g-item__label">Industrial Setup</span></div>
+        <div class="g-item" data-reveal style="--i:4" data-category="wiring"><img src="assets/89604179-7418-4c91-9942-3e025e19c875.jpg" alt="Office electrical wiring" loading="lazy"><span class="g-item__label">Office Wiring</span></div>
+        <div class="g-item" data-reveal style="--i:5" data-category="installation"><img src="assets/adb8f832-5353-459c-9a50-91e4c3c81d31.jpg" alt="Battery service and replacement" loading="lazy"><span class="g-item__label">Battery Service</span></div>
+
+        <div class="g-item" data-reveal style="--i:6" data-category="product"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.50%20PM.jpeg" alt="Royal Power Solutions UPS product" loading="lazy"><span class="g-item__label">Our Product</span></div>
+        <div class="g-item" data-reveal style="--i:7" data-category="product"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.49%20PM.jpeg" alt="Royal Power Solutions UPS product" loading="lazy"><span class="g-item__label">Our Product</span></div>
+        <div class="g-item" data-reveal style="--i:8" data-category="product"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.48%20PM.jpeg" alt="Royal Power Solutions UPS product" loading="lazy"><span class="g-item__label">Our Product</span></div>
+        <div class="g-item" data-reveal style="--i:9" data-category="product"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.48%20PM%20(1).jpeg" alt="Royal Power Solutions UPS product" loading="lazy"><span class="g-item__label">Our Product</span></div>
+        <div class="g-item" data-reveal style="--i:10" data-category="product"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.47%20PM.jpeg" alt="Royal Power Solutions UPS product" loading="lazy"><span class="g-item__label">Our Product</span></div>
+        <div class="g-item" data-reveal style="--i:11" data-category="product"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.46%20PM.jpeg" alt="Royal Power Solutions UPS product" loading="lazy"><span class="g-item__label">Our Product</span></div>
+        <div class="g-item" data-reveal style="--i:12" data-category="product"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.46%20PM%20(1).jpeg" alt="Royal Power Solutions UPS product" loading="lazy"><span class="g-item__label">Our Product</span></div>
+        <div class="g-item" data-reveal style="--i:13" data-category="product"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.45%20PM.jpeg" alt="Royal Power Solutions UPS product" loading="lazy"><span class="g-item__label">Our Product</span></div>
+        <div class="g-item" data-reveal style="--i:14" data-category="product"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.45%20PM%20(1).jpeg" alt="Royal Power Solutions UPS product" loading="lazy"><span class="g-item__label">Our Product</span></div>
+        <div class="g-item" data-reveal style="--i:15" data-category="product"><img src="assets/WhatsApp%20Image%202026-06-15%20at%209.39.44%20PM.jpeg" alt="Royal Power Solutions UPS product" loading="lazy"><span class="g-item__label">Our Product</span></div>
 
       </div>
     </div>
@@ -168,6 +178,9 @@
   <a href="https://wa.me/919787451828" target="_blank" rel="noopener noreferrer" class="fab-wa" aria-label="Chat with Royal Power Solutions on WhatsApp">
     <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
   </a>
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
   <script src="js/script.js"></script>
 </body>
 </html>
