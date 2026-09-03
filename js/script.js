@@ -14,12 +14,19 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   const links   = document.getElementById('navLinks');
   if (!nav) return;
 
-  // Scroll-triggered sticky state
+  // Scroll-triggered sticky state with rAF throttle
+  let navTicking = false;
   function onScroll() {
-    if (window.scrollY > 40) {
-      nav.classList.add('is-scrolled');
-    } else {
-      nav.classList.remove('is-scrolled');
+    if (!navTicking) {
+      window.requestAnimationFrame(() => {
+        if (window.scrollY > 40) {
+          nav.classList.add('is-scrolled');
+        } else {
+          nav.classList.remove('is-scrolled');
+        }
+        navTicking = false;
+      });
+      navTicking = true;
     }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -152,6 +159,7 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   if (!bar || !bolt) return;
 
   const totalDash = 460;
+  let chargeTicking = false;
 
   function update() {
     const scrolled = window.scrollY;
@@ -164,7 +172,17 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
     else                 bar.classList.remove('is-visible');
   }
 
-  window.addEventListener('scroll', update, { passive: true });
+  function onScroll() {
+    if (!chargeTicking) {
+      window.requestAnimationFrame(() => {
+        update();
+        chargeTicking = false;
+      });
+      chargeTicking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
   update();
 })();
 
@@ -471,9 +489,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   const btn = document.getElementById('scrollTopBtn');
   if (!btn) return;
 
+  let scrollTicking = false;
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) btn.classList.add('is-visible');
-    else                      btn.classList.remove('is-visible');
+    if (!scrollTicking) {
+      window.requestAnimationFrame(() => {
+        if (window.scrollY > 500) btn.classList.add('is-visible');
+        else                      btn.classList.remove('is-visible');
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
   }, { passive: true });
 
   btn.addEventListener('click', () => {

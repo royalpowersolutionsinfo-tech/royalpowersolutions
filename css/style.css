@@ -238,14 +238,17 @@ button {
   left: 0;
   right: 0;
   z-index: 100;
+  min-height: 78px;
   padding: 18px 0;
-  transition: all .35s var(--ease);
+  transition: padding .35s var(--ease), background .35s var(--ease), box-shadow .35s var(--ease);
 }
 
 .nav.is-scrolled {
+  min-height: 66px;
   padding: 12px 0;
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   box-shadow: var(--shadow-soft);
 }
 
@@ -632,6 +635,14 @@ button {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity .7s var(--ease), transform .7s var(--ease);
+}
+
+/* Above-the-fold elements must NOT animate or jump to prevent CLS */
+.hero [data-reveal],
+.page-header [data-reveal] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
 }
 
 [data-reveal].is-visible {
