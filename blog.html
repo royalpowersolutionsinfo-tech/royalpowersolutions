@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UPS, Battery & Electrical Tips Blog | Royal Power Solutions Chennai</title>
+  <meta name="description" content="Expert tips on UPS maintenance, battery care, stabilizer selection, solar installation and electrical safety from Royal Power Solutions Chennai. Free guides for homes & businesses.">
+  <link rel="canonical" href="https://royalpowersolutions.in/blog.html">
+  <meta property="og:title" content="UPS & Electrical Tips Blog | Royal Power Solutions Chennai">
+  <meta property="og:description" content="Expert tips on UPS, batteries, stabilizers & solar from Chennai's trusted power solutions provider since 2016.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://royalpowersolutions.in/blog.html">
+  <meta property="og:image" content="https://royalpowersolutions.in/assets/rps-logo.jpeg">
+  <meta property="og:site_name" content="Royal Power Solutions">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/rps-logo.jpeg">
+  <link rel="apple-touch-icon" href="assets/rps-logo.jpeg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JSON-LD Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Royal Power Solutions Blog",
+    "url": "https://royalpowersolutions.in/blog.html",
+    "description": "Expert UPS, battery, stabilizer and electrical tips for homes and businesses in Chennai.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Royal Power Solutions",
+      "logo": "https://royalpowersolutions.in/assets/rps-logo.jpeg",
+      "telephone": "+919787451828"
+    }
+  }
+  </script>
+
+  <style>
+    /* ── BLOG PAGE STYLES ── */
+    .blog-hero {
+      background: linear-gradient(135deg, var(--rps-navy-deep) 0%, var(--rps-navy) 60%, var(--rps-blue-dark) 100%);
+      padding: 120px 0 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .blog-hero h1 { color: #fff; margin-bottom: 16px; }
+    .blog-hero p { color: rgba(255,255,255,0.75); max-width: 600px; margin: 0 auto 24px; font-size: 1.1rem; }
+    .blog-hero .eyebrow { margin-bottom: 14px; }
+
+    /* Filter bar */
+    .blog-filter {
+      padding: 28px 0 10px;
+      background: var(--bg-soft);
+      border-bottom: 1px solid rgba(30,79,184,0.1);
+    }
+    .blog-filter__inner {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .filter-btn {
+      padding: 8px 20px;
+      border-radius: 50px;
+      border: 2px solid rgba(30,79,184,0.2);
+      background: #fff;
+      color: var(--text-muted);
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--rps-blue);
+      border-color: var(--rps-blue);
+      color: #fff;
+    }
+    .filter-btn.active-gold {
+      background: var(--rps-gold);
+      border-color: var(--rps-gold);
+      color: #111;
+    }
+
+    /* Blog grid */
+    .blog-section { padding: 60px 0 80px; }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+      margin-bottom: 50px;
+    }
+
+    /* Card */
+    .blog-card {
+      background: #fff;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      transition: transform .3s var(--ease), box-shadow .3s;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(30,79,184,0.07);
+    }
+    .blog-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(21,18,98,0.13); }
+
+    .blog-card__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      padding: 5px 12px;
+      border-radius: 50px;
+      margin-bottom: 12px;
+      width: fit-content;
+    }
+    .badge--ups    { background: #EEF2FF; color: var(--rps-blue); }
+    .badge--battery{ background: #ECFDF5; color: var(--rps-green-dark); }
+    .badge--solar  { background: #FFFBEB; color: #b45309; }
+    .badge--tips   { background: #FFF1F2; color: #be123c; }
+
+    .blog-card__body { padding: 28px 28px 20px; flex: 1; display: flex; flex-direction: column; }
+    .blog-card__meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      gap: 14px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .blog-card__meta i { color: var(--rps-gold); margin-right: 4px; }
+    .blog-card h2 { font-family: var(--font-display); font-size: 1.15rem; line-height: 1.4; margin-bottom: 10px; color: var(--text); }
+    .blog-card__excerpt { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; flex: 1; margin-bottom: 20px; }
+    .blog-card__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 28px;
+      border-top: 1px solid var(--bg-soft);
+      background: var(--bg-soft);
+    }
+    .blog-card__read {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--rps-blue);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap .2s;
+    }
+    .blog-card:hover .blog-card__read { gap: 10px; }
+    .blog-card__time { font-size: 0.78rem; color: var(--text-muted); }
+
+    /* Featured card */
+    .blog-card--featured {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .blog-card--featured .blog-card__body { padding: 40px; }
+    .blog-card--featured h2 { font-size: 1.5rem; }
+    .blog-card--featured .featured-visual {
+      background: linear-gradient(135deg, var(--rps-navy-deep), var(--rps-blue));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 6rem;
+      color: rgba(255,193,10,0.6);
+      min-height: 280px;
+    }
+
+    /* Newsletter CTA */
+    .blog-cta {
+      background: linear-gradient(135deg, var(--rps-navy-deep), var(--rps-blue));
+      border-radius: var(--radius-lg);
+      padding: 50px 40px;
+      text-align: center;
+      color: #fff;
+      margin-top: 40px;
+    }
+    .blog-cta h3 { font-family: var(--font-display); font-size: 1.6rem; margin-bottom: 10px; }
+    .blog-cta p { color: rgba(255,255,255,0.75); margin-bottom: 24px; }
+
+    @media(max-width: 768px) {
+      .blog-card--featured { grid-template-columns: 1fr; }
+      .blog-card--featured .featured-visual { min-height: 160px; font-size: 4rem; }
+      .blog-card--featured .blog-card__body { padding: 24px; }
+      .blog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- CHARGE BAR -->
+  <div class="charge-bar" id="chargeBar" aria-hidden="true">
+    <svg viewBox="0 0 40 400" preserveAspectRatio="none">
+      <path class="charge-track" d="M20 0 L14 140 L26 150 L10 260 L20 400" />
+      <path class="charge-bolt" id="chargeBolt" d="M20 0 L14 140 L26 150 L10 260 L20 400" />
+    </svg>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__brand" aria-label="Royal Power Solutions home">
+        <img src="assets/rps-logo.jpeg" alt="Royal Power Solutions logo" class="nav__logo" width="42" height="42">
+        <span class="nav__brand-text">Royal Power <em>Solutions</em></span>
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="Primary navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="tel:+919787451828" class="btn btn--ghost-nav">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i> 97874 51828
+        </a>
+        <a href="contact.html" class="btn btn--gold">Get Quote</a>
+      </div>
+      <button class="nav__burger" id="navBurger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- BLOG HERO -->
+  <section class="blog-hero">
+    <div class="container">
+      <p class="eyebrow" style="color:var(--rps-gold);">
+        <i class="fa-solid fa-bolt" aria-hidden="true"></i> Power Knowledge Hub
+      </p>
+      <h1>UPS, Battery &amp; Electrical<br><span style="color:var(--rps-gold);">Tips &amp; Guides</span></h1>
+      <p>Free expert advice from Royal Power Solutions — Chennai's trusted electrical &amp; power solutions provider since 2016. Learn how to protect your equipment, cut costs, and avoid power disasters.</p>
+      <a href="contact.html" class="btn btn--gold btn--lg">
+        <i class="fa-solid fa-phone"></i> Get Free Expert Advice — Call 97874 51828
+      </a>
+    </div>
+  </section>
+
+  <!-- FILTER BAR -->
+  <div class="blog-filter">
+    <div class="container blog-filter__inner">
+      <span style="font-weight:700;font-size:.85rem;color:var(--text-muted);margin-right:4px;">Filter:</span>
+      <button class="filter-btn active">All Posts</button>
+      <button class="filter-btn">UPS &amp; Power</button>
+      <button class="filter-btn">Batteries</button>
+      <button class="filter-btn">Stabilizers</button>
+      <button class="filter-btn">Solar</button>
+      <button class="filter-btn">Tips &amp; Guides</button>
+    </div>
+  </div>
+
+  <!-- BLOG GRID -->
+  <section class="blog-section">
+    <div class="container">
+      <div class="blog-grid">
+
+        <!-- FEATURED ARTICLE -->
+        <article class="blog-card blog-card--featured" data-reveal>
+          <div class="featured-visual" aria-hidden="true">⚡</div>
+          <div class="blog-card__body">
+            <span class="blog-card__badge badge--ups"><i class="fa-solid fa-bolt"></i> UPS &amp; Power</span>
+            <div class="blog-card__meta">
+              <span><i class="fa-regular fa-calendar"></i> September 2026</span>
+              <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+              <span style="color:var(--rps-gold);font-weight:700;"><i class="fa-solid fa-star"></i> Featured</span>
+            </div>
+            <h2>Online UPS vs Offline UPS — Which One Does Your Business Actually Need?</h2>
+            <p class="blog-card__excerpt">Confused between Online and Offline UPS? This complete guide explains the difference in simple language, with real-world examples from Chennai businesses. Find out which UPS is right for your office, shop or factory — and avoid expensive mistakes.</p>
+            <div class="blog-card__footer" style="background:transparent;border:none;padding:0;">
+              <a href="blog/online-ups-vs-offline-ups.html" class="btn btn--gold">
+                Read Full Guide <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ARTICLE 1 -->
+        <article class="blog-card" data-reveal>
+          <div class="blog-card__body">
+            <span class="blog-card__badge badge--battery"><i class="fa-solid fa-battery-half"></i> Batteries</span>
+            <div class="blog-card__meta">
+              <span><i class="fa-regular fa-calendar"></i> September 2026</span>
+              <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+            </div>
+            <h2>How Long Do UPS Batteries Last? 7 Signs You Need a Replacement</h2>
+            <p class="blog-card__excerpt">Most UPS batteries last 3–5 years — but Chennai's heat cuts that short. Learn the warning signs of a dying battery before it fails during a power cut and damages your equipment.</p>
+          </div>
+          <div class="blog-card__footer">
+            <a href="blog/how-long-do-ups-batteries-last.html" class="blog-card__read">
+              Read Article <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <span class="blog-card__time">6 min read</span>
+          </div>
+        </article>
+
+        <!-- ARTICLE 2 -->
+        <article class="blog-card" data-reveal>
+          <div class="blog-card__body">
+            <span class="blog-card__badge badge--tips"><i class="fa-solid fa-bell"></i> Tips &amp; Guides</span>
+            <div class="blog-card__meta">
+              <span><i class="fa-regular fa-calendar"></i> September 2026</span>
+              <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+            </div>
+            <h2>Why Is My UPS Beeping Constantly? 7 Reasons &amp; Easy Fixes</h2>
+            <p class="blog-card__excerpt">A beeping UPS is trying to tell you something important. From low battery to overload to faulty wiring — we explain every beep pattern and what you should do right now to protect your devices.</p>
+          </div>
+          <div class="blog-card__footer">
+            <a href="blog/why-ups-beeps-constantly.html" class="blog-card__read">
+              Read Article <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <span class="blog-card__time">5 min read</span>
+          </div>
+        </article>
+
+        <!-- ARTICLE 3 -->
+        <article class="blog-card" data-reveal>
+          <div class="blog-card__body">
+            <span class="blog-card__badge badge--ups"><i class="fa-solid fa-file-contract"></i> UPS &amp; Power</span>
+            <div class="blog-card__meta">
+              <span><i class="fa-regular fa-calendar"></i> August 2026</span>
+              <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+            </div>
+            <h2>UPS AMC in Chennai — What's Included &amp; Why It Saves You Money</h2>
+            <p class="blog-card__excerpt">Annual Maintenance Contracts aren't just a formality — they prevent costly breakdowns. We break down exactly what an UPS AMC covers, what to watch out for in cheap contracts, and how to get the best value in Chennai.</p>
+          </div>
+          <div class="blog-card__footer">
+            <a href="blog/ups-amc-guide-chennai.html" class="blog-card__read">
+              Read Article <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <span class="blog-card__time">7 min read</span>
+          </div>
+        </article>
+
+        <!-- ARTICLE 4 -->
+        <article class="blog-card" data-reveal>
+          <div class="blog-card__body">
+            <span class="blog-card__badge badge--ups"><i class="fa-solid fa-trophy"></i> UPS &amp; Power</span>
+            <div class="blog-card__meta">
+              <span><i class="fa-regular fa-calendar"></i> August 2026</span>
+              <span><i class="fa-regular fa-clock"></i> 9 min read</span>
+            </div>
+            <h2>Best UPS Brands in India 2026 — APC vs Luminous vs Microtek vs Numeric</h2>
+            <p class="blog-card__excerpt">Which UPS brand gives the best value in India? After servicing hundreds of UPS units across Chennai, here's our honest, experience-based comparison of the top brands — with pros, cons and price ranges.</p>
+          </div>
+          <div class="blog-card__footer">
+            <a href="blog/best-ups-brands-india.html" class="blog-card__read">
+              Read Article <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <span class="blog-card__time">9 min read</span>
+          </div>
+        </article>
+
+        <!-- ARTICLE 5 -->
+        <article class="blog-card" data-reveal>
+          <div class="blog-card__body">
+            <span class="blog-card__badge badge--tips"><i class="fa-solid fa-plug"></i> Stabilizers</span>
+            <div class="blog-card__meta">
+              <span><i class="fa-regular fa-calendar"></i> August 2026</span>
+              <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+            </div>
+            <h2>How to Choose the Right Stabilizer for Your Home in Chennai</h2>
+            <p class="blog-card__excerpt">Voltage fluctuations in Chennai can destroy air conditioners, refrigerators and TVs. Learn how to pick the correct stabilizer — the right KVA, type, and brand — without overpaying or underbuying.</p>
+          </div>
+          <div class="blog-card__footer">
+            <a href="blog/choose-stabilizer-home-chennai.html" class="blog-card__read">
+              Read Article <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <span class="blog-card__time">6 min read</span>
+          </div>
+        </article>
+
+        <!-- ARTICLE 6 -->
+        <article class="blog-card" data-reveal>
+          <div class="blog-card__body">
+            <span class="blog-card__badge badge--solar"><i class="fa-solid fa-solar-panel"></i> Solar</span>
+            <div class="blog-card__meta">
+              <span><i class="fa-regular fa-calendar"></i> July 2026</span>
+              <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+            </div>
+            <h2>Solar Panel Installation Cost in Chennai 2026 — Complete Price Guide</h2>
+            <p class="blog-card__excerpt">How much does it really cost to install solar panels in Chennai? We break down the cost per kW, government subsidies, payback period, and what to check before hiring any solar installer in Tamil Nadu.</p>
+          </div>
+          <div class="blog-card__footer">
+            <a href="blog/solar-panel-installation-cost-chennai.html" class="blog-card__read">
+              Read Article <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <span class="blog-card__time">8 min read</span>
+          </div>
+        </article>
+
+        <!-- ARTICLE 7 -->
+        <article class="blog-card" data-reveal>
+          <div class="blog-card__body">
+            <span class="blog-card__badge badge--tips"><i class="fa-solid fa-bolt-lightning"></i> Tips &amp; Guides</span>
+            <div class="blog-card__meta">
+              <span><i class="fa-regular fa-calendar"></i> July 2026</span>
+              <span><i class="fa-regular fa-clock"></i> 7 min read</span>
+            </div>
+            <h2>Isolation Transformer vs Stabilizer — What's the Difference &amp; Which Do You Need?</h2>
+            <p class="blog-card__excerpt">Many businesses confuse isolation transformers with stabilizers. They do very different things. This guide explains both in plain language, tells you which industries need isolation transformers, and what they cost in Chennai.</p>
+          </div>
+          <div class="blog-card__footer">
+            <a href="blog/isolation-transformer-vs-stabilizer.html" class="blog-card__read">
+              Read Article <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <span class="blog-card__time">7 min read</span>
+          </div>
+        </article>
+
+      </div><!-- /.blog-grid -->
+
+      <!-- CTA BLOCK -->
+      <div class="blog-cta" data-reveal>
+        <i class="fa-solid fa-phone-volume" style="font-size:2.5rem;color:var(--rps-gold);margin-bottom:16px;display:block;"></i>
+        <h3>Need Help With Your UPS or Electrical Issue?</h3>
+        <p>Call Royal Power Solutions for a free consultation. We serve all areas of Chennai with same-day response.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+          <a href="tel:+919787451828" class="btn btn--gold btn--lg">
+            <i class="fa-solid fa-phone"></i> Call 97874 51828
+          </a>
+          <a href="https://wa.me/919787451828" target="_blank" rel="noopener" class="btn btn--outline btn--lg" style="color:#fff;border-color:rgba(255,255,255,0.4);">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__col footer__col--brand">
+        <a href="index.html" class="footer__logo-link">
+          <img src="assets/rps-logo.jpeg" alt="Royal Power Solutions" class="footer__logo" width="54" height="54" loading="lazy">
+          <span class="footer__brand-text">Royal Power <em>Solutions</em></span>
+        </a>
+        <p class="footer__about">Chennai's trusted UPS, battery &amp; electrical services provider since 2016.</p>
+        <div class="footer__socials">
+          <a href="https://wa.me/919787451828" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="mailto:royalpowersolutionsinfo@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+          <a href="tel:+919787451828" aria-label="Phone"><i class="fa-solid fa-phone" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Our Services</h4>
+        <a href="services/ups-sales-service.html">UPS Sales &amp; Service</a>
+        <a href="services/ups-repair-amc.html">UPS Repair &amp; AMC</a>
+        <a href="services/battery-sales-service.html">Battery Sales &amp; Service</a>
+        <a href="services/server-stabilizer.html">Server Stabilizers</a>
+        <a href="services/isolation-transformer.html">Isolation Transformers</a>
+        <a href="services/solar-installation.html">Solar Installation</a>
+      </div>
+      <div class="footer__col">
+        <h4>Contact Us</h4>
+        <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> No: 55/15, 69th Street, RV Nagar, Jafferkhanpet, Chennai - 600 083</span>
+        <span><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+919787451828">97874 51828</a></span>
+        <span><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:royalpowersolutionsinfo@gmail.com">royalpowersolutionsinfo@gmail.com</a></span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; <span id="year"></span> Royal Power Solutions. All rights reserved.</p>
+        <p class="footer__tagline"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Powered by expertise. Driven by trust.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919787451828" target="_blank" rel="noopener noreferrer" class="fab-wa" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <script src="js/script.js"></script>
+</body>
+</html>
