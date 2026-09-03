@@ -1353,11 +1353,12 @@ section h2 {
   color: rgba(255, 255, 255, 0.72);
 }
 
-.footer__inner {
-  padding: 80px 0 50px;
+.footer__inner,
+.footer__grid {
+  padding: 70px 0 45px;
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
-  gap: 40px;
+  grid-template-columns: 1.45fr 0.95fr 1.15fr 0.95fr 1.25fr;
+  gap: 36px;
 }
 
 .footer__logo {
@@ -1371,9 +1372,10 @@ section h2 {
 
 .footer__brand p {
   font-size: 0.91rem;
-  max-width: 300px;
+  max-width: 320px;
   margin-bottom: 20px;
   line-height: 1.65;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .footer__socials {
@@ -1382,14 +1384,15 @@ section h2 {
 }
 
 .footer__socials a {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background .3s, color .3s, transform .3s;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .footer__socials a:hover {
@@ -1408,12 +1411,33 @@ section h2 {
 .footer__col h4 {
   color: #fff;
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 1.02rem;
   margin-bottom: 8px;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.footer__col h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 24px;
+  height: 2px;
+  background: var(--rps-gold);
+  border-radius: 2px;
+}
+
+.footer__col a {
+  color: rgba(255, 255, 255, 0.72);
+  transition: color .25s, transform .25s;
+  display: inline-block;
+  line-height: 1.5;
 }
 
 .footer__col a:hover {
   color: var(--rps-gold);
+  transform: translateX(3px);
 }
 
 .footer__col span {
@@ -1421,17 +1445,13 @@ section h2 {
   align-items: flex-start;
   gap: 10px;
   line-height: 1.55;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .footer__col span i {
   color: var(--rps-gold);
   margin-top: 3px;
   flex-shrink: 0;
-}
-
-.footer__col a {
-  color: rgba(255, 255, 255, 0.72);
-  transition: color .25s;
 }
 
 .footer__bottom {
@@ -1444,27 +1464,31 @@ section h2 {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px;
   font-size: 0.84rem;
 }
 
 .footer__tagline {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .footer__tagline i {
   color: var(--rps-gold);
 }
 
-@media (max-width: 900px) {
-  .footer__inner {
-    grid-template-columns: 1fr 1fr;
+@media (max-width: 1080px) {
+  .footer__inner,
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
   }
 }
 
-@media (max-width: 560px) {
-  .footer__inner {
+@media (max-width: 600px) {
+  .footer__inner,
+  .footer__grid {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .footer__bottom-inner {
@@ -1703,49 +1727,73 @@ section h2 {
   }
 }
 
-.faq-item {
+.faq-item,
+.faq-card {
   background: #fff;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(21, 18, 98, 0.07);
+  border: 1px solid rgba(21, 18, 98, 0.08);
   overflow: hidden;
-  transition: box-shadow .3s var(--ease), border-color .3s;
+  transition: box-shadow .3s var(--ease), border-color .3s, transform .2s ease;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 14px rgba(21, 18, 98, 0.04);
 }
 
-.faq-item:hover {
-  box-shadow: var(--shadow-soft);
-  border-color: rgba(255, 193, 10, 0.3);
+.faq-item:hover,
+.faq-card:hover {
+  box-shadow: 0 8px 24px rgba(21, 18, 98, 0.08);
+  border-color: rgba(255, 193, 10, 0.4);
 }
 
-.faq-item.is-open {
+.faq-item.is-open,
+.faq-card.is-open {
   border-color: var(--rps-gold);
-  box-shadow: 0 8px 24px rgba(255,193,10,0.15);
+  box-shadow: 0 8px 24px rgba(255, 193, 10, 0.15);
 }
 
-.faq-question {
+.faq-question,
+.faq-q,
+.faq-card__q {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 22px 24px;
+  padding: 20px 24px;
   cursor: pointer;
   width: 100%;
   text-align: left;
-  background: none;
+  background: #f8fafc;
   border: none;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 0.97rem;
+  font-size: 0.98rem;
   color: var(--rps-navy);
-  transition: color .25s;
+  transition: color .25s, background .25s;
+  user-select: none;
 }
 
-.faq-item.is-open .faq-question {
+.faq-question:hover,
+.faq-q:hover,
+.faq-card__q:hover {
+  background: #f1f5f9;
   color: var(--rps-blue);
 }
 
-.faq-question__icon {
-  width: 30px;
-  height: 30px;
+.faq-item.is-open .faq-question,
+.faq-item.is-open .faq-q,
+.faq-card.is-open .faq-question,
+.faq-card.is-open .faq-q,
+.faq-card.is-open .faq-card__q {
+  color: var(--rps-blue);
+  background: #ffffff;
+  border-bottom: 1px solid rgba(21, 18, 98, 0.06);
+}
+
+.faq-question__icon,
+.faq-question > i,
+.faq-q > i,
+.faq-card__q > i {
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: rgba(30, 79, 184, 0.08);
   color: var(--rps-blue);
@@ -1753,32 +1801,58 @@ section h2 {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   transition: transform .35s var(--ease), background .3s, color .3s;
 }
 
-.faq-item.is-open .faq-question__icon {
-  transform: rotate(45deg);
+.faq-item.is-open .faq-question__icon,
+.faq-item.is-open .faq-question > i,
+.faq-item.is-open .faq-q > i,
+.faq-card.is-open .faq-question > i,
+.faq-card.is-open .faq-card__q > i {
+  transform: rotate(180deg);
   background: var(--rps-gold);
   color: var(--rps-navy);
 }
 
-.faq-answer {
+/* Also support rotation if the icon is a fa-plus */
+.faq-item.is-open .faq-question__icon:has(.fa-plus),
+.faq-item.is-open .fa-plus {
+  transform: rotate(45deg);
+}
+
+.faq-answer,
+.faq-a,
+.faq-card__a {
   max-height: 0;
   overflow: hidden;
-  transition: max-height .45s cubic-bezier(.22,.85,.32,1), padding .35s;
+  transition: max-height .45s cubic-bezier(.22, .85, .32, 1), padding .35s, opacity .35s;
   padding: 0 24px;
+  opacity: 0;
+  background: #ffffff;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.75;
 }
 
-.faq-answer p {
-  padding-bottom: 22px;
-  color: var(--text-muted);
-  font-size: 0.93rem;
-  line-height: 1.7;
+.faq-answer p,
+.faq-a p,
+.faq-card__a p {
+  padding: 18px 0;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin: 0;
 }
 
-.faq-item.is-open .faq-answer {
-  max-height: 300px;
+.faq-item.is-open .faq-answer,
+.faq-item.is-open .faq-a,
+.faq-card.is-open .faq-answer,
+.faq-card.is-open .faq-a,
+.faq-card.is-open .faq-card__a {
+  max-height: 800px;
+  padding: 18px 24px 22px;
+  opacity: 1;
 }
 
 /* ── AMC BANNER ───────────────────────────────────────────── */

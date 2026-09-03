@@ -140,9 +140,7 @@
     .cta-inline { background: linear-gradient(135deg, var(--rps-navy-deep), var(--rps-blue)); border-radius: var(--radius-md); padding: 40px 30px; text-align: center; margin: 45px 0; color: #fff; }
     .cta-inline h3 { font-family: var(--font-display); font-size: 1.45rem; margin-bottom: 12px; color: #fff; }
     .cta-inline p { color: rgba(255,255,255,0.8); margin-bottom: 24px; max-width: 580px; margin-left: auto; margin-right: auto; line-height: 1.6; }
-    .faq-item { border: 1px solid rgba(30,79,184,0.12); border-radius: var(--radius-sm); margin-bottom: 14px; overflow: hidden; }
-    .faq-q { padding: 18px 22px; font-weight: 700; color: var(--rps-navy); cursor: pointer; background: var(--bg-soft); font-size: 1rem; display: flex; align-items: center; justify-content: space-between; }
-    .faq-a { padding: 18px 22px; font-size: .95rem; color: #374151; line-height: 1.75; border-top: 1px solid rgba(30,79,184,0.08); background: #fff; }
+    
     .breadcrumb { font-size: .84rem; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
     .breadcrumb a { color: rgba(255,255,255,0.8); text-decoration: none; }
     .breadcrumb a:hover { color: var(--rps-gold); }
@@ -487,42 +485,67 @@
   </article>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer__grid">
-      <div class="footer__col footer__col--brand">
-        <a href="../index.html" class="footer__logo-link">
-          <img src="../assets/rps-logo.jpeg" alt="Royal Power Solutions" class="footer__logo" width="54" height="54" loading="lazy">
-          <span class="footer__brand-text">Royal Power <em>Solutions</em></span>
-        </a>
-        <p class="footer__about">Chennai's trusted UPS, battery &amp; electrical services provider since 2016. Delivering uninterrupted uptime across commercial, healthcare, and industrial sectors.</p>
-        <div class="footer__socials">
-          <a href="https://wa.me/919787451828" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="mailto:royalpowersolutionsinfo@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-          <a href="tel:+919787451828" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
-        </div>
-      </div>
-      <div class="footer__col">
-        <h4>Quick Links</h4>
-        <a href="../index.html">Home</a>
-        <a href="../services.html">Services</a>
-        <a href="../projects.html">Projects</a>
-        <a href="../blog.html">Blog</a>
-        <a href="../contact.html">Contact</a>
-      </div>
-      <div class="footer__col">
-        <h4>Contact Us</h4>
-        <span><i class="fa-solid fa-phone"></i> <a href="tel:+919787451828">97874 51828</a></span>
-        <span><i class="fa-solid fa-envelope"></i> <a href="mailto:royalpowersolutionsinfo@gmail.com">royalpowersolutionsinfo@gmail.com</a></span>
-        <span><i class="fa-solid fa-location-dot"></i> Jafferkhanpet, Chennai - 600 083</span>
+  <footer class="footer" aria-label="Site footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <img src="../assets/rps-logo.jpeg" alt="Royal Power Solutions logo" class="footer__logo" width="56" height="56">
+      <p>Powering homes, offices and industries across Chennai with dependable UPS systems and electrical services since 2016.</p>
+      <div class="footer__socials">
+        <a href="https://wa.me/919787451828" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+        <a href="mailto:royalpowersolutionsinfo@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        <a href="tel:+919787451828" aria-label="Phone"><i class="fa-solid fa-phone" aria-hidden="true"></i></a>
       </div>
     </div>
-    <div class="footer__bottom">
-      <div class="container footer__bottom-inner">
-        <p>&copy; <span id="year"></span> Royal Power Solutions. All rights reserved.</p>
-        <p class="footer__tagline"><i class="fa-solid fa-bolt"></i> Powered by expertise. Driven by trust.</p>
-      </div>
+
+    <div class="footer__col">
+      <h4>Quick Links</h4>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About Us</a>
+      <a href="../services.html">Services</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../gallery.html">Gallery</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../contact.html">Contact</a>
     </div>
-  </footer>
+
+    <div class="footer__col">
+      <h4>Our Services</h4>
+      <a href="../services/ups-sales-service.html">UPS Sales &amp; Service</a>
+      <a href="../services/ups-repair-amc.html">UPS Repair &amp; AMC</a>
+      <a href="../services/ups-installation.html">UPS Installation</a>
+      <a href="../services/battery-sales-service.html">Battery Sales &amp; Service</a>
+      <a href="../services/server-stabilizer.html">Server Stabilizers</a>
+      <a href="../services/isolation-transformer.html">Isolation Transformers</a>
+      <a href="../services/solar-installation.html">Solar Installation</a>
+      <a href="../services/electrical-work.html">Electrical Work</a>
+    </div>
+
+    <div class="footer__col footer__col--locations">
+      <h4>Service Areas</h4>
+      <a href="../locations/jafferkhanpet.html">Jafferkhanpet</a>
+      <a href="../locations/ashok-pillar.html">Ashok Pillar</a>
+      <a href="../locations/west-mambalam.html">West Mambalam</a>
+      <a href="../locations/guindy.html">Guindy</a>
+      <a href="../locations/saidapet.html">Saidapet</a>
+      <a href="../locations/chennai.html">Greater Chennai</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Contact Us</h4>
+      <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> No: 55/15, 69th Street, RV Nagar, Jafferkhanpet, Chennai - 600 083</span>
+      <span><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+919787451828">97874 51828</a></span>
+      <span><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:royalpowersolutionsinfo@gmail.com">royalpowersolutionsinfo@gmail.com</a></span>
+      <span><i class="fa-solid fa-file-invoice" aria-hidden="true"></i> GST: 33CKUPB0081N2ZX</span>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <p>&copy; <span id="year"></span> Royal Power Solutions. All rights reserved.</p>
+      <p class="footer__tagline"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Powered by expertise. Driven by trust.</p>
+    </div>
+  </div>
+</footer>
 
   <!-- FLOATING WHATSAPP & SCROLL TOP -->
   <a href="https://wa.me/919787451828" target="_blank" rel="noopener noreferrer" class="fab-wa" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>

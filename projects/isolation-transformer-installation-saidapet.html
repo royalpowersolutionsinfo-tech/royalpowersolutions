@@ -404,34 +404,7 @@
       margin: 0;
     }
 
-    /* FAQ Section within Body */
-    .faq-item {
-      background: #ffffff;
-      border: 1px solid var(--border-light);
-      border-radius: 10px;
-      padding: 20px 24px;
-      margin-bottom: 16px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
-    }
-    .faq-item h4 {
-      font-size: 1.1rem;
-      color: var(--rps-navy);
-      margin: 0 0 10px;
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-    }
-    .faq-item h4 i {
-      color: var(--rps-blue);
-      margin-top: 4px;
-      font-size: 0.95rem;
-    }
-    .faq-item p {
-      font-size: 0.95rem;
-      color: #4b5563;
-      margin: 0;
-      line-height: 1.65;
-    }
+    
 
     /* Sidebar Sticky Card */
     .sidebar-card {
@@ -846,25 +819,46 @@
 
           <!-- Frequently Asked Questions Section -->
           <h2>Frequently Asked Questions</h2>
-          
-          <div class="faq-item">
-            <h4><i class="fa-solid fa-circle-question"></i> Why did the Saidapet CNC workshop need an isolation transformer instead of just a servo stabilizer?</h4>
-            <p>A servo voltage stabilizer corrects steady-state over-voltage and under-voltage variations (such as fluctuating grid lines between 370V and 440V) by mechanically adjusting a variac. However, it does not provide galvanic isolation. High-frequency electrical noise, harmonic spikes from neighbouring welders, and neutral-to-ground floating voltages pass straight through a stabilizer. The isolation transformer physically separates the incoming utility grid from the CNC electronics, attenuates spikes by over 100 dB, and establishes a local, zero-voltage neutral reference.</p>
-          </div>
+          <div class="faq-container">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span><i class="fa-solid fa-circle-question" style="color:var(--rps-gold);margin-right:8px;"></i> Why did the Saidapet CNC workshop need an isolation transformer instead of just a servo stabilizer?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                A servo voltage stabilizer corrects steady-state over-voltage and under-voltage variations (such as fluctuating grid lines between 370V and 440V) by mechanically adjusting a variac. However, it does not provide galvanic isolation. High-frequency electrical noise, harmonic spikes from neighbouring welders, and neutral-to-ground floating voltages pass straight through a stabilizer. The isolation transformer physically separates the incoming utility grid from the CNC electronics, attenuates spikes by over 100 dB, and establishes a local, zero-voltage neutral reference.
+              </div>
+            </div>
 
-          <div class="faq-item">
-            <h4><i class="fa-solid fa-circle-question"></i> How does a 25 KVA isolation transformer prevent CNC servo motor trips and encoder errors?</h4>
-            <p>CNC servo drives and optical encoders exchange digital pulses at high frequencies. When common-mode voltage spikes or ground loops infect the power supply, these spurious spikes induce false pulses on encoder feedback lines, triggering alarms like AL-04, 401 VRDY OFF, and axis communication faults. The 25 KVA copper-wound isolation transformer with dual electrostatic Faraday shielding drains all high-frequency transients directly to earth, guaranteeing pure, noise-free sinusoidal power to the CNC controller.</p>
-          </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span><i class="fa-solid fa-circle-question" style="color:var(--rps-gold);margin-right:8px;"></i> How does a 25 KVA isolation transformer prevent CNC servo motor trips and encoder errors?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                CNC servo drives and optical encoders exchange digital pulses at high frequencies. When common-mode voltage spikes or ground loops infect the power supply, these spurious spikes induce false pulses on encoder feedback lines, triggering alarms like AL-04, 401 VRDY OFF, and axis communication faults. The 25 KVA copper-wound isolation transformer with dual electrostatic Faraday shielding drains all high-frequency transients directly to earth, guaranteeing pure, noise-free sinusoidal power to the CNC controller.
+              </div>
+            </div>
 
-          <div class="faq-item">
-            <h4><i class="fa-solid fa-circle-question"></i> What is the importance of a dedicated chemical earthing pit for an isolation transformer?</h4>
-            <p>The electrostatic Faraday shield and the secondary neutral star-point of the isolation transformer must be bonded to a low-resistance earth ground (&lt; 1 Ohm). If the earth resistance is high, high-frequency noise intercepted by the Faraday shield cannot dissipate efficiently into the ground, and the secondary neutral will float above zero potential. In this Saidapet project, Royal Power Solutions installed a chemical compound earth pit achieving 0.72 Ohms, ensuring rock-solid noise dissipation.</p>
-          </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span><i class="fa-solid fa-circle-question" style="color:var(--rps-gold);margin-right:8px;"></i> What is the importance of a dedicated chemical earthing pit for an isolation transformer?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                The electrostatic Faraday shield and the secondary neutral star-point of the isolation transformer must be bonded to a low-resistance earth ground (&lt; 1 Ohm). If the earth resistance is high, high-frequency noise intercepted by the Faraday shield cannot dissipate efficiently into the ground, and the secondary neutral will float above zero potential. In this Saidapet project, Royal Power Solutions installed a chemical compound earth pit achieving 0.72 Ohms, ensuring rock-solid noise dissipation.
+              </div>
+            </div>
 
-          <div class="faq-item">
-            <h4><i class="fa-solid fa-circle-question"></i> How long does the 25 KVA isolation transformer installation take for an active Chennai factory?</h4>
-            <p>Turnkey installation—including equipment rigging, chemical earthing pit excavation, input and output cable glanding, insulation resistance (megger) testing, and full CNC step-load commissioning—is completed within 1 working day. Royal Power Solutions routinely schedules installations during weekend plant shutdowns or off-shift hours so your regular production schedule experiences zero downtime.</p>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span><i class="fa-solid fa-circle-question" style="color:var(--rps-gold);margin-right:8px;"></i> How long does the 25 KVA isolation transformer installation take for an active Chennai factory?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                Turnkey installation—including equipment rigging, chemical earthing pit excavation, input and output cable glanding, insulation resistance (megger) testing, and full CNC step-load commissioning—is completed within 1 working day. Royal Power Solutions routinely schedules installations during weekend plant shutdowns or off-shift hours so your regular production schedule experiences zero downtime.
+              </div>
+            </div>
           </div>
 
         </article>
@@ -975,52 +969,66 @@
 
   <!-- Standard Site Footer -->
   <footer class="footer" aria-label="Site footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <img src="../assets/rps-logo.jpeg" alt="Royal Power Solutions logo" class="footer__logo" width="56" height="56">
-        <p>Powering homes, offices and industries across Chennai with dependable UPS systems, isolation transformers, and electrical engineering services since 2016.</p>
-        <div class="footer__socials">
-          <a href="https://wa.me/919787451828" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
-          <a href="mailto:royalpowersolutionsinfo@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
-          <a href="tel:+919787451828" aria-label="Phone"><i class="fa-solid fa-phone" aria-hidden="true"></i></a>
-        </div>
-      </div>
-      <div class="footer__col">
-        <h4>Quick Links</h4>
-        <a href="../index.html">Home</a>
-        <a href="../about.html">About Us</a>
-        <a href="../services.html">Services</a>
-        <a href="../projects.html">Projects</a>
-        <a href="../gallery.html">Gallery</a>
-        <a href="../blog.html">Blog</a>
-        <a href="../contact.html">Contact</a>
-      </div>
-      <div class="footer__col">
-        <h4>Our Services</h4>
-        <a href="../services/ups-sales-service.html">UPS Sales &amp; Service</a>
-        <a href="../services/ups-repair-amc.html">UPS Repair &amp; AMC</a>
-        <a href="../services/ups-installation.html">UPS Installation</a>
-        <a href="../services/battery-sales-service.html">Battery Sales &amp; Service</a>
-        <a href="../services/server-stabilizer.html">Server Stabilizers</a>
-        <a href="../services/isolation-transformer.html">Isolation Transformers</a>
-        <a href="../services/solar-installation.html">Solar Installation</a>
-        <a href="../services/electrical-work.html">Electrical Work</a>
-      </div>
-      <div class="footer__col">
-        <h4>Contact Us</h4>
-        <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> No: 55/15, 69th Street, RV Nagar, Jafferkhanpet, Chennai - 600 083</span>
-        <span><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+919787451828">97874 51828</a></span>
-        <span><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:royalpowersolutionsinfo@gmail.com">royalpowersolutionsinfo@gmail.com</a></span>
-        <span><i class="fa-solid fa-file-invoice" aria-hidden="true"></i> GST: 33CKUPB0081N2ZX</span>
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <img src="../assets/rps-logo.jpeg" alt="Royal Power Solutions logo" class="footer__logo" width="56" height="56">
+      <p>Powering homes, offices and industries across Chennai with dependable UPS systems and electrical services since 2016.</p>
+      <div class="footer__socials">
+        <a href="https://wa.me/919787451828" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+        <a href="mailto:royalpowersolutionsinfo@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        <a href="tel:+919787451828" aria-label="Phone"><i class="fa-solid fa-phone" aria-hidden="true"></i></a>
       </div>
     </div>
-    <div class="footer__bottom">
-      <div class="container footer__bottom-inner">
-        <p>&copy; <span id="year"></span> Royal Power Solutions. All rights reserved.</p>
-        <p class="footer__tagline"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Powered by expertise. Driven by trust.</p>
-      </div>
+
+    <div class="footer__col">
+      <h4>Quick Links</h4>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About Us</a>
+      <a href="../services.html">Services</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../gallery.html">Gallery</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../contact.html">Contact</a>
     </div>
-  </footer>
+
+    <div class="footer__col">
+      <h4>Our Services</h4>
+      <a href="../services/ups-sales-service.html">UPS Sales &amp; Service</a>
+      <a href="../services/ups-repair-amc.html">UPS Repair &amp; AMC</a>
+      <a href="../services/ups-installation.html">UPS Installation</a>
+      <a href="../services/battery-sales-service.html">Battery Sales &amp; Service</a>
+      <a href="../services/server-stabilizer.html">Server Stabilizers</a>
+      <a href="../services/isolation-transformer.html">Isolation Transformers</a>
+      <a href="../services/solar-installation.html">Solar Installation</a>
+      <a href="../services/electrical-work.html">Electrical Work</a>
+    </div>
+
+    <div class="footer__col footer__col--locations">
+      <h4>Service Areas</h4>
+      <a href="../locations/jafferkhanpet.html">Jafferkhanpet</a>
+      <a href="../locations/ashok-pillar.html">Ashok Pillar</a>
+      <a href="../locations/west-mambalam.html">West Mambalam</a>
+      <a href="../locations/guindy.html">Guindy</a>
+      <a href="../locations/saidapet.html">Saidapet</a>
+      <a href="../locations/chennai.html">Greater Chennai</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Contact Us</h4>
+      <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> No: 55/15, 69th Street, RV Nagar, Jafferkhanpet, Chennai - 600 083</span>
+      <span><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+919787451828">97874 51828</a></span>
+      <span><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:royalpowersolutionsinfo@gmail.com">royalpowersolutionsinfo@gmail.com</a></span>
+      <span><i class="fa-solid fa-file-invoice" aria-hidden="true"></i> GST: 33CKUPB0081N2ZX</span>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <p>&copy; <span id="year"></span> Royal Power Solutions. All rights reserved.</p>
+      <p class="footer__tagline"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Powered by expertise. Driven by trust.</p>
+    </div>
+  </div>
+</footer>
 
   <!-- Floating Elements -->
   <a href="https://wa.me/919787451828" target="_blank" rel="noopener noreferrer" class="fab-wa" aria-label="Chat on WhatsApp">

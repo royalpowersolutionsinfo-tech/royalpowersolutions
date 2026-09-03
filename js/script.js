@@ -310,19 +310,38 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 /* ── 10. FAQ ACCORDION ────────────────────────────────────── */
 (function initFAQ() {
-  const items = document.querySelectorAll('.faq-item');
+  const items = document.querySelectorAll('.faq-item, .faq-card');
   if (!items.length) return;
 
   items.forEach(item => {
-    const question = item.querySelector('.faq-question');
+    const question = item.querySelector('.faq-question, .faq-q, .faq-card__q, h4');
     if (!question) return;
 
     question.addEventListener('click', () => {
       const isOpen = item.classList.contains('is-open');
-      // Close all others
-      items.forEach(i => i.classList.remove('is-open'));
+      // If within a container/grid, close siblings
+      const parent = item.parentElement;
+      if (parent) {
+        const siblings = parent.querySelectorAll('.faq-item, .faq-card');
+        siblings.forEach(i => {
+          if (i !== item) {
+            i.classList.remove('is-open');
+            const btn = i.querySelector('button.faq-question');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+      
       // Toggle current
-      if (!isOpen) item.classList.add('is-open');
+      if (!isOpen) {
+        item.classList.add('is-open');
+        const btn = item.querySelector('button.faq-question');
+        if (btn) btn.setAttribute('aria-expanded', 'true');
+      } else {
+        item.classList.remove('is-open');
+        const btn = item.querySelector('button.faq-question');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      }
     });
   });
 })();
