@@ -1,0 +1,587 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Royal Power Solutions - SEO Keywords Ranking Sheet</title>
+<!--[if gte mso 9]>
+<xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:Zoom>100</w:Zoom>
+  <w:DoNotOptimizeForBrowser/>
+ </w:WordDocument>
+</xml>
+<![endif]-->
+<style>
+  body {
+    font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.5;
+    color: #2D3748;
+    background-color: #FFFFFF;
+    margin: 30px;
+  }
+  h1 {
+    font-size: 24pt;
+    color: #1E3A8A;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+  .subtitle {
+    font-size: 12pt;
+    color: #4A5568;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .notice-box {
+    background-color: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    border-radius: 6px;
+    padding: 12px 18px;
+    margin-bottom: 30px;
+  }
+  .notice-box strong {
+    color: #1E40AF;
+  }
+  h2 {
+    font-size: 15pt;
+    color: #1E3A8A;
+    border-bottom: 2px solid #DBEAFE;
+    padding-bottom: 6px;
+    margin-top: 30px;
+    margin-bottom: 6px;
+  }
+  .section-desc {
+    font-style: italic;
+    color: #64748B;
+    margin-bottom: 12px;
+    font-size: 10pt;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+    font-size: 10.5pt;
+  }
+  th {
+    background-color: #1E3A8A;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px 12px;
+    border: 1px solid #1E3A8A;
+  }
+  td {
+    padding: 8px 12px;
+    border: 1px solid #E2E8F0;
+    vertical-align: middle;
+  }
+  tr:nth-child(even) td {
+    background-color: #F8FAFC;
+  }
+  .col-num {
+    width: 5%;
+    text-align: center;
+    font-weight: 600;
+  }
+  .col-kw {
+    width: 45%;
+    font-weight: 600;
+    color: #0F172A;
+  }
+  .col-page {
+    width: 30%;
+    color: #475569;
+    font-family: Consolas, monospace;
+    font-size: 9.5pt;
+  }
+  .col-rank {
+    width: 20%;
+    color: #94A3B8;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<h1>Royal Power Solutions — SEO Keyword Tracking Sheet</h1>
+<div class="subtitle">Website: <strong>royalpowersolutions.in</strong> | Target: Google Search Rankings</div>
+
+<div class="notice-box">
+  <strong>How to use this Word Document:</strong> This document is fully editable in Microsoft Word, Google Docs, WordPad, or WPS Office. As you test your rankings on Google or Google Search Console, simply click into the <em>Current Rank</em> column and enter your position (e.g. <code>#1</code>, <code>#4</code>, <code>Page 2</code>, or <code>Not Ranked</code>).
+</div>
+
+<h2>1. Brand Keywords</h2>
+<div class="section-desc">Direct brand and company name variations</div>
+<table>
+<thead>
+  <tr>
+    <th class="col-num">#</th>
+    <th class="col-kw">Target Keyword</th>
+    <th class="col-page">Target Page</th>
+    <th class="col-rank">Current Rank</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="col-num">1</td>
+    <td class="col-kw">Royal Power Solutions</td>
+    <td class="col-page">index.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">2</td>
+    <td class="col-kw">Royal Power Solutions Chennai</td>
+    <td class="col-page">index.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">3</td>
+    <td class="col-kw">Royal Power Solutions Jafferkhanpet</td>
+    <td class="col-page">locations/jafferkhanpet.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">4</td>
+    <td class="col-kw">Royal Power Solutions UPS</td>
+    <td class="col-page">services/ups-sales-service.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">5</td>
+    <td class="col-kw">RPS Chennai UPS</td>
+    <td class="col-page">index.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+</tbody>
+</table>
+
+<h2>2. Core High-Priority Money Keywords</h2>
+<div class="section-desc">Primary commercial keywords for customers in Chennai seeking UPS and electrical services</div>
+<table>
+<thead>
+  <tr>
+    <th class="col-num">#</th>
+    <th class="col-kw">Target Keyword</th>
+    <th class="col-page">Target Page</th>
+    <th class="col-rank">Current Rank</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="col-num">1</td>
+    <td class="col-kw">UPS Sales and Service in Chennai</td>
+    <td class="col-page">services/ups-sales-service.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">2</td>
+    <td class="col-kw">UPS Repair in Chennai</td>
+    <td class="col-page">services/ups-repair-amc.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">3</td>
+    <td class="col-kw">UPS AMC in Chennai</td>
+    <td class="col-page">services/ups-repair-amc.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">4</td>
+    <td class="col-kw">UPS Annual Maintenance Contract Chennai</td>
+    <td class="col-page">services/ups-repair-amc.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">5</td>
+    <td class="col-kw">UPS Installation in Chennai</td>
+    <td class="col-page">services/ups-installation.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">6</td>
+    <td class="col-kw">UPS Battery Sales and Service in Chennai</td>
+    <td class="col-page">services/battery-sales-service.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">7</td>
+    <td class="col-kw">UPS Battery Replacement in Chennai</td>
+    <td class="col-page">services/battery-sales-service.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">8</td>
+    <td class="col-kw">Online UPS Sales Chennai</td>
+    <td class="col-page">services/ups-sales-service.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">9</td>
+    <td class="col-kw">Server Stabilizer in Chennai</td>
+    <td class="col-page">services/server-stabilizer.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">10</td>
+    <td class="col-kw">Server Stabilizer Sales and Service Chennai</td>
+    <td class="col-page">services/server-stabilizer.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">11</td>
+    <td class="col-kw">Servo Voltage Stabilizer Chennai</td>
+    <td class="col-page">services/server-stabilizer.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">12</td>
+    <td class="col-kw">Isolation Transformer Installation in Chennai</td>
+    <td class="col-page">services/isolation-transformer.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">13</td>
+    <td class="col-kw">Isolation Transformer Sales and Service in Chennai</td>
+    <td class="col-page">services/isolation-transformer.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">14</td>
+    <td class="col-kw">Solar Panel Installation in Chennai</td>
+    <td class="col-page">services/solar-installation.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">15</td>
+    <td class="col-kw">Electrical Work in Chennai</td>
+    <td class="col-page">services/electrical-work.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">16</td>
+    <td class="col-kw">Electrical Contractor in Chennai</td>
+    <td class="col-page">services/electrical-work.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">17</td>
+    <td class="col-kw">UPS Shifting in Chennai</td>
+    <td class="col-page">services/ups-shifting.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">18</td>
+    <td class="col-kw">UPS Relocation Services Chennai</td>
+    <td class="col-page">services/ups-shifting.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+</tbody>
+</table>
+
+<h2>3. Local Area Keywords (Geo-Targeted Local SEO)</h2>
+<div class="section-desc">Local rankings across prime commercial and industrial hubs in Chennai</div>
+<table>
+<thead>
+  <tr>
+    <th class="col-num">#</th>
+    <th class="col-kw">Target Keyword</th>
+    <th class="col-page">Target Page</th>
+    <th class="col-rank">Current Rank</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="col-num">1</td>
+    <td class="col-kw">UPS Sales and Service in Jafferkhanpet</td>
+    <td class="col-page">jafferkhanpet/ups-sales-service.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">2</td>
+    <td class="col-kw">UPS Repair in Jafferkhanpet</td>
+    <td class="col-page">jafferkhanpet/ups-repair-amc.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">3</td>
+    <td class="col-kw">UPS Battery in Jafferkhanpet</td>
+    <td class="col-page">jafferkhanpet/battery-sales-service.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">4</td>
+    <td class="col-kw">Server Stabilizer in Jafferkhanpet</td>
+    <td class="col-page">jafferkhanpet/server-stabilizer.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">5</td>
+    <td class="col-kw">Electrical Work in Jafferkhanpet</td>
+    <td class="col-page">jafferkhanpet/electrical-work.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">6</td>
+    <td class="col-kw">UPS Sales and Service in Ashok Pillar</td>
+    <td class="col-page">ashok-pillar/ups-sales-service.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">7</td>
+    <td class="col-kw">UPS Repair in Ashok Pillar</td>
+    <td class="col-page">ashok-pillar/ups-repair-amc.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">8</td>
+    <td class="col-kw">UPS Installation in Ashok Pillar</td>
+    <td class="col-page">ashok-pillar/ups-installation.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">9</td>
+    <td class="col-kw">Server Stabilizer in Ashok Pillar</td>
+    <td class="col-page">ashok-pillar/server-stabilizer.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">10</td>
+    <td class="col-kw">UPS Sales and Service in Guindy</td>
+    <td class="col-page">guindy/ups-sales-service.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">11</td>
+    <td class="col-kw">Industrial UPS Guindy</td>
+    <td class="col-page">guindy/ups-sales-service.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">12</td>
+    <td class="col-kw">UPS AMC in Guindy</td>
+    <td class="col-page">guindy/ups-repair-amc.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">13</td>
+    <td class="col-kw">Servo Stabilizer in Guindy</td>
+    <td class="col-page">guindy/server-stabilizer.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">14</td>
+    <td class="col-kw">UPS Sales and Service in West Mambalam</td>
+    <td class="col-page">west-mambalam/ups-sales-service.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">15</td>
+    <td class="col-kw">UPS Repair in West Mambalam</td>
+    <td class="col-page">west-mambalam/ups-repair-amc.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">16</td>
+    <td class="col-kw">Inverter Battery in West Mambalam</td>
+    <td class="col-page">west-mambalam/battery-sales-service.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">17</td>
+    <td class="col-kw">UPS Sales and Service in Saidapet</td>
+    <td class="col-page">saidapet/ups-sales-service.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">18</td>
+    <td class="col-kw">UPS Repair in Saidapet</td>
+    <td class="col-page">saidapet/ups-repair-amc.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">19</td>
+    <td class="col-kw">Electrical Contractor in Saidapet</td>
+    <td class="col-page">saidapet/electrical-work.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">20</td>
+    <td class="col-kw">UPS Sales and Service in Ambattur</td>
+    <td class="col-page">ambattur/ups-sales-service.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">21</td>
+    <td class="col-kw">Industrial UPS in Ambattur</td>
+    <td class="col-page">ambattur/ups-sales-service.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+</tbody>
+</table>
+
+<h2>4. Equipment, Battery & B2B Services</h2>
+<div class="section-desc">Targeted long-tail and B2B industrial keywords</div>
+<table>
+<thead>
+  <tr>
+    <th class="col-num">#</th>
+    <th class="col-kw">Target Keyword</th>
+    <th class="col-page">Target Page</th>
+    <th class="col-rank">Current Rank</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="col-num">1</td>
+    <td class="col-kw">Lithium Ion Battery for UPS Chennai</td>
+    <td class="col-page">chennai/lithium-battery-sales.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">2</td>
+    <td class="col-kw">LiFePO4 UPS Battery Chennai</td>
+    <td class="col-page">chennai/lithium-ion-battery.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">3</td>
+    <td class="col-kw">UPS Commissioning in Chennai</td>
+    <td class="col-page">chennai/ups-commissioning.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">4</td>
+    <td class="col-kw">UPS Loading and Unloading Chennai</td>
+    <td class="col-page">chennai/ups-loading-unloading.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">5</td>
+    <td class="col-kw">Manual Stabilizer Rental Chennai</td>
+    <td class="col-page">chennai/manual-stabilizer-rental.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">6</td>
+    <td class="col-kw">Trolley Rental for UPS Chennai</td>
+    <td class="col-page">chennai/trolley-rental.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">7</td>
+    <td class="col-kw">AC Panel Sales and Service Chennai</td>
+    <td class="col-page">chennai/ac-panel-work.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">8</td>
+    <td class="col-kw">AC DC MBS Sales Chennai</td>
+    <td class="col-page">chennai/ac-dc-mbs-sales.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">9</td>
+    <td class="col-kw">Medical Isolation Transformer Chennai</td>
+    <td class="col-page">chennai/isolation-transformer-installation.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">10</td>
+    <td class="col-kw">1KVA to 1000KVA UPS Chennai</td>
+    <td class="col-page">services/ups-sales-service.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">11</td>
+    <td class="col-kw">Exide UPS Battery Chennai</td>
+    <td class="col-page">services/battery-sales-service.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">12</td>
+    <td class="col-kw">Amaron Quanta Battery Chennai</td>
+    <td class="col-page">services/battery-sales-service.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">13</td>
+    <td class="col-kw">APC UPS Repair Chennai</td>
+    <td class="col-page">services/ups-repair-amc.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">14</td>
+    <td class="col-kw">Numeric UPS Service Chennai</td>
+    <td class="col-page">services/ups-repair-amc.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+</tbody>
+</table>
+
+<h2>5. Informational & Blog Keywords</h2>
+<div class="section-desc">Content keywords driving organic search queries to blog guides</div>
+<table>
+<thead>
+  <tr>
+    <th class="col-num">#</th>
+    <th class="col-kw">Target Keyword</th>
+    <th class="col-page">Target Page</th>
+    <th class="col-rank">Current Rank</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="col-num">1</td>
+    <td class="col-kw">Why UPS beeps constantly</td>
+    <td class="col-page">blog/why-ups-beeps-constantly.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">2</td>
+    <td class="col-kw">Online UPS vs Offline UPS</td>
+    <td class="col-page">blog/online-ups-vs-offline-ups.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">3</td>
+    <td class="col-kw">How long do UPS batteries last</td>
+    <td class="col-page">blog/how-long-do-ups-batteries-last.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">4</td>
+    <td class="col-kw">Best UPS brands in India</td>
+    <td class="col-page">blog/best-ups-brands-india.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">5</td>
+    <td class="col-kw">Isolation transformer vs stabilizer</td>
+    <td class="col-page">blog/isolation-transformer-vs-stabilizer.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">6</td>
+    <td class="col-kw">Solar panel installation cost in Chennai</td>
+    <td class="col-page">blog/solar-panel-installation-cost-chennai.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">7</td>
+    <td class="col-kw">UPS AMC guide Chennai</td>
+    <td class="col-page">blog/ups-amc-guide-chennai.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+  <tr>
+    <td class="col-num">8</td>
+    <td class="col-kw">How to choose stabilizer for home Chennai</td>
+    <td class="col-page">blog/choose-stabilizer-home-chennai.html</td>
+    <td class="col-rank">[ Enter Rank ]</td>
+  </tr>
+</tbody>
+</table>
+
+</body>
+</html>

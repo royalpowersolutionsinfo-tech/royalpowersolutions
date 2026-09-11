@@ -506,3 +506,127 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 })();
 
+/* ── 14. INTERACTIVE UPS LOAD CALCULATOR ─────────────────── */
+(function initUpsCalculator() {
+  const calc = document.getElementById('upsCalculator');
+  if (!calc) return;
+
+  const totalWattsEl = document.getElementById('calcTotalWatts');
+  const totalVaEl    = document.getElementById('calcTotalVA');
+  const recKvaEl     = document.getElementById('calcRecKVA');
+  const quoteBtn     = document.getElementById('calcQuoteBtn');
+
+  // Standard wattage ratings for common appliances
+  const wattages = {
+    pc: 200,
+    laptop: 65,
+    tv: 100,
+    light: 15,
+    fan: 75,
+    server: 1200,
+    ac: 1400,
+    router: 15
+  };
+
+  const counts = {
+    pc: 1,
+    laptop: 1,
+    tv: 0,
+    light: 4,
+    fan: 2,
+    server: 0,
+    ac: 0,
+    router: 1
+  };
+
+  function calculate() {
+    let totalWatts = 0;
+    for (const key in counts) {
+      totalWatts += counts[key] * (wattages[key] || 0);
+    }
+
+    // Minimum sensible baseline if everything is 0
+    if (totalWatts === 0) totalWatts = 100;
+
+    // Power factor standard 0.8
+    const rawVA = totalWatts / 0.8;
+    // Add 25% safety headroom for startup surges & battery efficiency
+    const recommendedVA = Math.round(rawVA * 1.25);
+
+    let recommendedKVA = '1 KVA';
+    if (recommendedVA <= 1000)      recommendedKVA = '1 KVA (Online UPS)';
+    else if (recommendedVA <= 2000) recommendedKVA = '2 KVA (Online UPS)';
+    else if (recommendedVA <= 3000) recommendedKVA = '3 KVA (Online UPS)';
+    else if (recommendedVA <= 5000) recommendedKVA = '5 KVA (Online UPS)';
+    else if (recommendedVA <= 7500) recommendedKVA = '7.5 KVA (Online UPS)';
+    else if (recommendedVA <= 10000) recommendedKVA = '10 KVA (Online UPS)';
+    else if (recommendedVA <= 15000) recommendedKVA = '15 KVA (Online UPS)';
+    else if (recommendedVA <= 20000) recommendedKVA = '20 KVA (Online UPS)';
+    else if (recommendedVA <= 30000) recommendedKVA = '30 KVA (Online UPS)';
+    else if (recommendedVA <= 50000) recommendedKVA = '50 KVA (Online UPS)';
+    else                            recommendedKVA = `${Math.ceil(recommendedVA / 1000)} KVA (Industrial UPS)`;
+
+    if (totalWattsEl) totalWattsEl.textContent = `${totalWatts} W`;
+    if (totalVaEl)    totalVaEl.textContent = `${recommendedVA} VA`;
+    if (recKvaEl)     recKvaEl.textContent = recommendedKVA;
+
+    if (quoteBtn) {
+      const msg = encodeURIComponent(`Hi Royal Power Solutions, I used your UPS Calculator on royalpowersolutions.in:
+My Load: ${totalWatts} Watts (${recommendedVA} VA).
+Recommended Size: ${recommendedKVA}.
+Please send me pricing and battery options.`);
+      quoteBtn.href = `https://wa.me/919787451828?text=${msg}`;
+    }
+  }
+
+  // Bind plus and minus buttons
+  calc.querySelectorAll('[data-counter]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const appKey = btn.getAttribute('data-app');
+      const action = btn.getAttribute('data-counter');
+      const valEl = calc.querySelector(`[data-val="${appKey}"]`);
+
+      if (action === 'plus') {
+        counts[appKey] = (counts[appKey] || 0) + 1;
+      } else if (action === 'minus') {
+        if (counts[appKey] > 0) counts[appKey] -= 1;
+      }
+
+      if (valEl) valEl.textContent = counts[appKey];
+      calculate();
+    });
+  });
+
+  // Initial calculation on load
+  calculate();
+})();
+
+/* ── 15. HERO QUICK QUOTE FORM ───────────────────────────── */
+(function initHeroForm() {
+  const form = document.getElementById('heroQuickForm');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = (form.querySelector('[name="name"]')?.value || '').trim();
+    const phone = (form.querySelector('[name="phone"]')?.value || '').trim();
+    const service = form.querySelector('[name="service"]')?.value || 'General Inquiry';
+
+    if (!phone) {
+      alert('Please enter your mobile phone number.');
+      return;
+    }
+
+    const text = encodeURIComponent(`Hi Royal Power Solutions,
+I would like a fast quote from your website:
+• Name: ${name || 'Customer'}
+• Phone: ${phone}
+• Service Needed: ${service}
+Please contact me.`);
+
+    window.open(`https://wa.me/919787451828?text=${text}`, '_blank');
+  });
+})();
+
+
