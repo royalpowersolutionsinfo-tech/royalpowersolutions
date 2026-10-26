@@ -60,6 +60,16 @@ const locations = [
     pincode: '600015'
   },
   {
+    slug: 'ambattur',
+    name: 'Ambattur',
+    area: 'Ambattur Industrial Estate',
+    city: 'Chennai',
+    nearBy: 'Ambattur Industrial Estate, Mogappair, Padi, Avadi, Anna Nagar West',
+    lat: 13.1143,
+    lng: 80.1548,
+    pincode: '600058'
+  },
+  {
     slug: 'chennai',
     name: 'Chennai',
     area: 'Chennai',
@@ -90,6 +100,26 @@ const services = [
         { q: `What UPS brands do you sell in {location}, Chennai?`, a: `We stock and supply all major brands including Emerson, APC, Numeric, Luminous, Sukam, and Microtek — all sourced from authorised distributors with manufacturer warranty.` },
         { q: `Do you provide UPS AMC in {location}?`, a: `Yes. We offer comprehensive Annual Maintenance Contracts covering quarterly preventive maintenance visits, emergency call-outs, and battery health checks for all UPS sizes in {location} and surrounding areas.` },
         { q: `How fast is your emergency UPS repair response in {location}?`, a: `Our average emergency response time in {location} is under 60 minutes. We maintain a team of technicians in the {location} area so you are never left without power support.` }
+      ]
+    }
+  },
+  {
+    slug: 'ups-repair-amc',
+    title: 'UPS Repair & AMC',
+    keyword: 'UPS Repair and AMC',
+    shortDesc: 'Fast UPS repair for all brands, plus Annual Maintenance Contracts with 24/7 breakdown support.',
+    icon: 'fa-screwdriver-wrench',
+    h1Pattern: '{keyword} in {location}, Chennai',
+    metaTitle: '{keyword} in {location} Chennai | Royal Power Solutions',
+    metaDesc: 'Fast UPS repair and AMC in {location}, Chennai. We repair APC, Numeric, Emerson, Luminous UPS systems with genuine spares and emergency 24/7 support. Call 9787451828.',
+    content: {
+      intro: `Facing a UPS breakdown or looking for a dependable Annual Maintenance Contract in {location}, Chennai? Royal Power Solutions provides expert on-site UPS repair and comprehensive AMC plans for residential, commercial, and industrial facilities in {location}. Our certified electrical engineers diagnose PCB issues, inverter boards, transformer coils, and battery strings with rapid turnaround and 90-day repair warranties.`,
+      sizes: ['1 KVA', '3 KVA', '5 KVA', '7.5 KVA', '10 KVA', '15 KVA', '20 KVA', '30 KVA', '50 KVA', '80 KVA', '100 KVA', '150 KVA', '200 KVA', '300 KVA', '500 KVA'],
+      features: ['24/7 breakdown call-out response', 'Quarterly scheduled preventive maintenance visits', 'On-site repair for APC, Emerson, Numeric, Luminous, Sukam', 'Genuine manufacturer spare parts with warranty', 'Comprehensive battery testing and conductance analysis', 'Detailed digital service and diagnostic reports'],
+      faq: [
+        { q: `Do you provide emergency UPS repair in {location}, Chennai?`, a: `Yes. Our mobile technician teams cover {location} with an emergency on-site response time under 60 minutes for critical facility breakdowns.` },
+        { q: `What does a UPS AMC cover in {location}?`, a: `Our UPS AMC includes scheduled quarterly preventive maintenance visits, thorough internal cleaning, component testing, battery health analysis, and priority 24/7 emergency repair support.` },
+        { q: `Can you repair third-party installed UPS systems in {location}?`, a: `Yes, we service and repair all major UPS makes and capacities regardless of who originally supplied or installed the system.` }
       ]
     }
   },
@@ -533,6 +563,7 @@ function footerHTML(depth = '') {
         <a href="${depth}locations/west-mambalam.html">West Mambalam</a>
         <a href="${depth}locations/guindy.html">Guindy</a>
         <a href="${depth}locations/saidapet.html">Saidapet</a>
+        <a href="${depth}locations/ambattur.html">Ambattur</a>
         <a href="${depth}locations/chennai.html">Chennai</a>
       </div>
       <div class="footer__col">
@@ -555,39 +586,62 @@ function footerHTML(depth = '') {
 // ── PAGE GENERATOR ─────────────────────────────────────────
 function generatePage(service, location) {
   const depth = '../';
-  const h1 = (service.h1Pattern || '{keyword} in {location}, Chennai')
+  const isCityWide = location.slug === 'chennai';
+  const locDisplay = isCityWide ? 'Chennai' : `${location.name}, Chennai`;
+  const locMeta = isCityWide ? 'Chennai' : `${location.name} Chennai`;
+
+  let h1 = (service.h1Pattern || '{keyword} in {location}, Chennai')
     .replace('{keyword}', service.title)
+    .replace('{location}, Chennai', locDisplay)
     .replace('{location}', location.name);
-  const metaTitle = service.metaTitle
+  if (isCityWide) {
+    h1 = h1.replace(/Chennai,\s*Chennai/gi, 'Chennai').replace(/Chennai\s+Chennai/gi, 'Chennai');
+  }
+
+  let metaTitle = service.metaTitle
     .replace(/{keyword}/g, service.title)
+    .replace('{location} Chennai', locMeta)
     .replace(/{location}/g, location.name);
-  const metaDesc = service.metaDesc
+  if (isCityWide) {
+    metaTitle = metaTitle.replace(/Chennai,\s*Chennai/gi, 'Chennai').replace(/Chennai\s+Chennai/gi, 'Chennai');
+  }
+
+  let metaDesc = service.metaDesc
+    .replace('{location}, Chennai', locDisplay)
     .replace(/{location}/g, location.name);
+  if (isCityWide) {
+    metaDesc = metaDesc.replace(/Chennai,\s*Chennai/gi, 'Chennai').replace(/Chennai\s+Chennai/gi, 'Chennai');
+  }
+
   const canonicalUrl = `https://royalpowersolutions.in/${location.slug}/${service.slug}.html`;
   
-  const intro = service.content.intro
+  let intro = service.content.intro
+    .replace('{location}, Chennai', locDisplay)
     .replace(/{location}/g, location.name);
+  if (isCityWide) {
+    intro = intro.replace(/Chennai,\s*Chennai/gi, 'Chennai').replace(/Chennai\s+Chennai/gi, 'Chennai');
+  }
 
-  const sizesHTML = service.content.sizes.map(s => `<span class="amc-badge"><i class="fa-solid fa-check"></i> ${s}</span>`).join('\n            ');
-  const featuresHTML = service.content.features.map(f => `<li><i class="fa-solid fa-check" aria-hidden="true"></i> ${f.replace(/{location}/g, location.name)}</li>`).join('\n              ');
+  const sizesHTML = service.content.sizes.map(s => `<span class="amc-badge amc-badge--light"><i class="fa-solid fa-check"></i> ${s}</span>`).join('\n            ');
+  const featuresHTML = service.content.features.map(f => `<li><i class="fa-solid fa-check" aria-hidden="true"></i> ${f.replace('{location}, Chennai', locDisplay).replace(/{location}/g, location.name).replace(/Chennai,\s*Chennai/gi, 'Chennai')}</li>`).join('\n              ');
 
   const faqSchemaItems = service.content.faq.map((f, i) => `{
       "@type": "Question",
-      "name": "${f.q.replace(/{location}/g, location.name).replace(/"/g, '\\"')}",
+      "name": "${f.q.replace('{location}, Chennai', locDisplay).replace(/{location}/g, location.name).replace(/Chennai,\s*Chennai/gi, 'Chennai').replace(/"/g, '\\"')}",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "${f.a.replace(/{location}/g, location.name).replace(/"/g, '\\"')}"
+        "text": "${f.a.replace('{location}, Chennai', locDisplay).replace(/{location}/g, location.name).replace(/Chennai,\s*Chennai/gi, 'Chennai').replace(/"/g, '\\"')}"
       }
     }`).join(',\n    ');
 
   const faqHTML = service.content.faq.map(f => `
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              ${f.q.replace(/{location}/g, location.name)}
+              ${f.q.replace('{location}, Chennai', locDisplay).replace(/{location}/g, location.name).replace(/Chennai,\s*Chennai/gi, 'Chennai')}
               <span class="faq-question__icon"><i class="fa-solid fa-plus"></i></span>
             </button>
             <div class="faq-answer">
-              <p>${f.a.replace(/{location}/g, location.name)}</p>
+              <p>${f.a.replace('{location}, Chennai', locDisplay).replace(/{location}/g, location.name).replace(/Chennai,\s*Chennai/gi, 'Chennai')}</p>
             </div>
           </div>`).join('\n');
 
@@ -605,8 +659,13 @@ function generatePage(service, location) {
   // Other location links for same service
   const otherLocations = locations
     .filter(l => l.slug !== location.slug)
-    .map(l => `<a href="../${l.slug}/${service.slug}.html" style="color:var(--rps-blue);font-size:0.9rem;">${service.title} in ${l.name}</a>`)
-    .join(' &bull; ');
+    .map(l => `<a href="../${l.slug}/${service.slug}.html" class="keyword-pill"><i class="fa-solid fa-location-dot"></i> ${service.title} in ${l.name}</a>`)
+    .join('');
+
+  // All services in this location (Keywords Boost)
+  const allKeywordsPills = services
+    .map(s => `<a href="../${location.slug}/${s.slug}.html" class="keyword-pill"><i class="fa-solid fa-bolt"></i> ${s.keyword || s.title} ${isCityWide ? 'Chennai' : location.name}</a>`)
+    .join('');
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -615,12 +674,15 @@ function generatePage(service, location) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${metaTitle}</title>
   <meta name="description" content="${metaDesc}">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="${canonicalUrl}">
   <meta property="og:title" content="${metaTitle}">
   <meta property="og:description" content="${metaDesc}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="${canonicalUrl}">
   <meta property="og:image" content="https://royalpowersolutions.in/assets/rps-logo.jpeg">
+  <meta property="og:site_name" content="Royal Power Solutions">
+  <meta property="og:locale" content="en_IN">
 
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="${depth}assets/rps-logo.jpeg">
@@ -662,7 +724,7 @@ function generatePage(service, location) {
       },
       "areaServed": {
         "@type": "City",
-        "name": "${location.name}, Chennai"
+        "name": "${isCityWide ? 'Chennai, Tamil Nadu' : `${location.name}, Chennai`}"
       },
       "priceRange": "₹₹",
       "openingHoursSpecification": [{
@@ -673,14 +735,14 @@ function generatePage(service, location) {
       }],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "${service.title} in ${location.name}",
+        "name": "${service.title} in ${isCityWide ? 'Chennai' : location.name}",
         "itemListElement": [{
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
             "name": "${service.title}",
             "description": "${service.shortDesc}",
-            "areaServed": "${location.name}, Chennai"
+            "areaServed": "${isCityWide ? 'Chennai, Tamil Nadu' : `${location.name}, Chennai`}"
           }
         }]
       }
@@ -690,7 +752,7 @@ function generatePage(service, location) {
       "@type": "BreadcrumbList",
       "itemListElement": [
         {"@type":"ListItem","position":1,"name":"Home","item":"https://royalpowersolutions.in/"},
-        {"@type":"ListItem","position":2,"name":"${location.name}","item":"https://royalpowersolutions.in/locations/${location.slug}.html"},
+        {"@type":"ListItem","position":2,"name":"${isCityWide ? 'Greater Chennai' : location.name}","item":"https://royalpowersolutions.in/locations/${location.slug}.html"},
         {"@type":"ListItem","position":3,"name":"${service.title}","item":"${canonicalUrl}"}
       ]
     },
@@ -733,7 +795,7 @@ function generatePage(service, location) {
         <ol style="display:flex;gap:8px;list-style:none;color:rgba(255,255,255,0.6);font-size:0.82rem;flex-wrap:wrap;">
           <li><a href="${depth}index.html" style="color:rgba(255,255,255,0.7);">Home</a></li>
           <li style="opacity:0.5;">/</li>
-          <li><a href="${depth}locations/${location.slug}.html" style="color:rgba(255,255,255,0.7);">${location.name}</a></li>
+          <li><a href="${depth}locations/${location.slug}.html" style="color:rgba(255,255,255,0.7);">${isCityWide ? 'Greater Chennai' : location.name}</a></li>
           <li style="opacity:0.5;">/</li>
           <li style="color:var(--rps-gold);">${service.title}</li>
         </ol>
@@ -742,7 +804,7 @@ function generatePage(service, location) {
       <p data-reveal>${service.shortDesc}</p>
       <div style="display:flex;gap:14px;margin-top:24px;flex-wrap:wrap;" data-reveal>
         <a href="tel:+919787451828" class="btn btn--gold"><i class="fa-solid fa-phone"></i> Call Now</a>
-        <a href="https://wa.me/919787451828?text=Hi%2C+I+need+${encodeURIComponent(service.title)}+in+${encodeURIComponent(location.name)}%2C+Chennai" target="_blank" rel="noopener" class="btn btn--outline"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://wa.me/919787451828?text=Hi%2C+I+need+${encodeURIComponent(service.title)}+in+${encodeURIComponent(isCityWide ? 'Chennai' : location.name)}" target="_blank" rel="noopener" class="btn btn--outline"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
       </div>
     </div>
   </section>
@@ -754,8 +816,8 @@ function generatePage(service, location) {
     <div class="container">
       <div class="about__split">
         <div class="about__text" data-reveal>
-          <p class="eyebrow eyebrow--dark"><i class="fa-solid fa-location-dot"></i> ${location.name}, Chennai</p>
-          <h2>${service.title} — Trusted Experts in ${location.name}</h2>
+          <p class="eyebrow eyebrow--dark"><i class="fa-solid fa-location-dot"></i> ${isCityWide ? 'City-Wide Chennai Support' : `${location.name}, Chennai`}</p>
+          <h2>${service.title} — Trusted Experts in ${isCityWide ? 'Chennai' : location.name}</h2>
           <p>${intro}</p>
           <div class="why__list" style="margin-top:28px;" aria-label="Service features">
             <ul>
@@ -770,16 +832,16 @@ function generatePage(service, location) {
           </div>
         </div>
         <div data-reveal style="background:var(--bg-soft);border-radius:var(--radius-lg);padding:36px;box-shadow:var(--shadow-soft);">
-          <p class="eyebrow eyebrow--dark">Available Sizes</p>
+          <p class="eyebrow eyebrow--dark">Available Capacities &amp; Options</p>
           <h3 style="font-size:1.3rem;margin-bottom:20px;color:var(--rps-navy);">We Supply &amp; Service</h3>
           <div style="display:flex;flex-wrap:wrap;gap:10px;">
             ${sizesHTML}
           </div>
           <div style="margin-top:28px;padding:20px;background:#fff;border-radius:12px;border-left:4px solid var(--rps-gold);">
             <p style="font-weight:600;color:var(--rps-navy);margin-bottom:4px;"><i class="fa-solid fa-clock" style="color:var(--rps-gold);"></i> 24/7 Emergency Service</p>
-            <p style="color:var(--text-muted);font-size:0.9rem;">Available in ${location.name} and surrounding areas of Chennai.</p>
+            <p style="color:var(--text-muted);font-size:0.9rem;">Available in ${isCityWide ? 'all areas across Chennai' : `${location.name} and surrounding areas of Chennai`}.</p>
           </div>
-          <a href="https://wa.me/919787451828?text=Hi%2C+I+need+${encodeURIComponent(service.title)}+in+${encodeURIComponent(location.name)}" target="_blank" rel="noopener" class="btn btn--gold" style="width:100%;justify-content:center;margin-top:20px;">
+          <a href="https://wa.me/919787451828?text=Hi%2C+I+need+${encodeURIComponent(service.title)}+in+${encodeURIComponent(isCityWide ? 'Chennai' : location.name)}" target="_blank" rel="noopener" class="btn btn--gold" style="width:100%;justify-content:center;margin-top:20px;">
             <i class="fa-brands fa-whatsapp"></i> WhatsApp for Quick Quote
           </a>
         </div>
@@ -825,8 +887,8 @@ function generatePage(service, location) {
         </div>
         <div class="s-card s-card--cta" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);">
           <div class="s-card__icon"><i class="fa-solid fa-location-dot"></i></div>
-          <h3>Local to ${location.name}</h3>
-          <p>We are based near ${location.name} — fast arrival, no long-distance travel charges.</p>
+          <h3>Local to ${isCityWide ? 'Chennai' : location.name}</h3>
+          <p>We are based in ${isCityWide ? 'Chennai' : location.name} — fast arrival, prompt on-site support across the city.</p>
         </div>
       </div>
     </div>
@@ -838,14 +900,14 @@ function generatePage(service, location) {
   <section style="padding:80px 0;background:var(--bg-soft);">
     <div class="container" data-reveal>
       <p class="eyebrow eyebrow--dark"><i class="fa-solid fa-map"></i> Service Coverage</p>
-      <h2>We Cover ${location.name} &amp; Nearby Areas</h2>
-      <p style="color:var(--text-muted);max-width:640px;margin-bottom:30px;">Our team based in ${location.name} quickly reaches: <strong>${location.nearBy}</strong> and the wider Chennai metropolitan area.</p>
+      <h2>We Cover ${isCityWide ? 'All of Chennai' : location.name} &amp; Nearby Areas</h2>
+      <p style="color:var(--text-muted);max-width:640px;margin-bottom:30px;">${isCityWide ? 'Our rapid-response mobile service units quickly reach all 15 zones of Chennai including: <strong>Guindy, Ambattur, OMR, Velachery, T. Nagar, Anna Nagar, Vadapalani, Porur, Sriperumbudur</strong>, and surrounding industrial hubs.' : `Our team based in ${location.name} quickly reaches: <strong>${location.nearBy}</strong> and the wider Chennai metropolitan area.`}</p>
       <div style="border-radius:16px;overflow:hidden;box-shadow:0 15px 40px rgba(0,0,0,0.12);border:3px solid var(--rps-gold);line-height:0;">
         <iframe
-          src="https://www.google.com/maps?q=${encodeURIComponent(location.name + ', Chennai, Tamil Nadu')}&output=embed"
+          src="https://www.google.com/maps?q=${encodeURIComponent(isCityWide ? 'Chennai, Tamil Nadu' : location.name + ', Chennai, Tamil Nadu')}&output=embed"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          title="${service.title} service area — ${location.name}, Chennai"
+          title="${service.title} service area — ${isCityWide ? 'Greater Chennai' : `${location.name}, Chennai`}"
           style="width:100%;height:400px;border:none;"
           allowfullscreen>
         </iframe>
@@ -884,6 +946,22 @@ function generatePage(service, location) {
   </section>
 
   <!-- ============================================================
+       ALL KEYWORDS DIRECTORY (BOOST ALL TARGET KEYWORDS)
+  ============================================================ -->
+  <section style="padding:60px 0;background:#ffffff;" aria-label="All services in this area">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:24px;" data-reveal>
+        <p class="eyebrow eyebrow--dark"><i class="fa-solid fa-list-check"></i> Power &amp; Electrical Services Directory</p>
+        <h2>All Services &amp; Solutions in ${location.name}</h2>
+        <p style="color:var(--text-muted);max-width:620px;margin:8px auto 0;">Explore our complete range of certified UPS, battery, stabilizer, transformer, and electrical engineering services available in ${location.name}.</p>
+      </div>
+      <div class="keyword-cloud" style="justify-content:center;" data-reveal>
+        ${allKeywordsPills}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        CTA BANNER
   ============================================================ -->
   <section style="background:var(--rps-blue);padding:80px 0;color:#fff;text-align:center;position:relative;overflow:hidden;" data-reveal>
@@ -900,10 +978,10 @@ function generatePage(service, location) {
   </section>
 
   <!-- Other Locations -->
-  <section style="padding:40px 0;background:#fff;">
+  <section style="padding:40px 0;background:var(--bg-soft);">
     <div class="container" style="text-align:center;">
-      <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:10px;">Also available in:</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+      <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:14px;"><strong>${service.title}</strong> is also available in these areas:</p>
+      <div class="keyword-cloud" style="justify-content:center;">
         ${otherLocations}
       </div>
     </div>
@@ -925,8 +1003,13 @@ function generatePage(service, location) {
 // ── LOCATION HUB PAGE GENERATOR ────────────────────────────
 function generateLocationHub(location) {
   const depth = '../';
-  const title = `UPS & Electrical Services in ${location.name}, Chennai | Royal Power Solutions`;
-  const desc = `Royal Power Solutions offers UPS sales, service, electrical work, solar, stabilizers and more in ${location.name}, Chennai. GST registered. 24/7 support. Call 9787451828.`;
+  const isCityWide = location.slug === 'chennai';
+  const title = isCityWide
+    ? `UPS & Electrical Services in Chennai | Royal Power Solutions`
+    : `UPS & Electrical Services in ${location.name}, Chennai | Royal Power Solutions`;
+  const desc = isCityWide
+    ? `Royal Power Solutions is Chennai's trusted power backup & electrical contractor. 1KVA-1000KVA UPS sales, repair, AMC, batteries, solar, stabilizers & 24/7 service. Call 9787451828.`
+    : `Royal Power Solutions offers UPS sales, service, electrical work, solar, stabilizers and more in ${location.name}, Chennai. GST registered. 24/7 support. Call 9787451828.`;
   const canonicalUrl = `https://royalpowersolutions.in/locations/${location.slug}.html`;
 
   const servicesGridHTML = services.map((s, i) => `
@@ -944,12 +1027,15 @@ function generateLocationHub(location) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title}</title>
   <meta name="description" content="${desc}">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="${canonicalUrl}">
   <meta property="og:title" content="${title}">
   <meta property="og:description" content="${desc}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="${canonicalUrl}">
   <meta property="og:image" content="https://royalpowersolutions.in/assets/rps-logo.jpeg">
+  <meta property="og:site_name" content="Royal Power Solutions">
+  <meta property="og:locale" content="en_IN">
 
   <link rel="icon" type="image/jpeg" href="${depth}assets/rps-logo.jpeg">
   <link rel="apple-touch-icon" href="${depth}assets/rps-logo.jpeg">
@@ -963,13 +1049,16 @@ function generateLocationHub(location) {
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Royal Power Solutions — ${location.name}",
+    "name": "Royal Power Solutions — ${isCityWide ? 'Greater Chennai' : location.name}",
     "url": "${canonicalUrl}",
     "telephone": "+919787451828",
+    "email": "royalpowersolutionsinfo@gmail.com",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "${location.name}",
+      "streetAddress": "No: 55/15, 69th Street, RV Nagar, Jafferkhanpet",
+      "addressLocality": "Chennai",
       "addressRegion": "Tamil Nadu",
+      "postalCode": "600083",
       "addressCountry": "IN"
     },
     "geo": {
@@ -977,7 +1066,7 @@ function generateLocationHub(location) {
       "latitude": ${location.lat},
       "longitude": ${location.lng}
     },
-    "areaServed": "${location.name}, Chennai"
+    "areaServed": "${isCityWide ? 'Greater Chennai, Tamil Nadu' : `${location.name}, Chennai`}"
   }
   </script>
 
@@ -1001,21 +1090,22 @@ function generateLocationHub(location) {
         <ol style="display:flex;gap:8px;list-style:none;color:rgba(255,255,255,0.6);font-size:0.82rem;">
           <li><a href="${depth}index.html" style="color:rgba(255,255,255,0.7);">Home</a></li>
           <li style="opacity:0.5;">/</li>
-          <li style="color:var(--rps-gold);">${location.name}</li>
+          <li style="color:var(--rps-gold);">${isCityWide ? 'Greater Chennai' : location.name}</li>
         </ol>
       </nav>
-      <h1 data-reveal>UPS &amp; Electrical Services in ${location.name}, Chennai</h1>
-      <p data-reveal>All electrical and power backup services available in ${location.name} — UPS, inverters, batteries, solar, stabilizers, and more. 24/7 support.</p>
+      <h1 data-reveal>UPS &amp; Electrical Services in ${isCityWide ? 'Greater Chennai' : `${location.name}, Chennai`}</h1>
+      <p data-reveal>${isCityWide ? 'Complete power continuity solutions for homes, commercial offices, healthcare facilities, and manufacturing industries across all 15 zones of Chennai.' : `All electrical and power backup services available in ${location.name} — UPS, inverters, batteries, solar, stabilizers, and more. 24/7 support.`}</p>
     </div>
   </section>
 
   <section style="padding:80px 0;background:var(--bg-soft);">
     <div class="container">
       <div style="text-align:center;margin-bottom:50px;" data-reveal>
-        <p class="eyebrow eyebrow--dark"><i class="fa-solid fa-location-dot"></i> ${location.name}, Chennai</p>
-        <h2>All Services Available in ${location.name}</h2>
-        <p style="color:var(--text-muted);max-width:600px;margin:0 auto;">Click any service below to learn more and get a free quote for ${location.name} and nearby areas including ${location.nearBy}.</p>
+        <p class="eyebrow eyebrow--dark"><i class="fa-solid fa-location-dot"></i> Local Services Hub</p>
+        <h2>Available Power Solutions in ${isCityWide ? 'Chennai' : location.name}</h2>
+        <p style="color:var(--text-muted);max-width:600px;margin:10px auto 0;">Explore full capacity specifications, brand warranties, and emergency repair options.</p>
       </div>
+
       <div class="services__grid">
         ${servicesGridHTML}
       </div>
@@ -1033,16 +1123,30 @@ function generateLocationHub(location) {
     </div>
   </section>
 
-  <section style="background:var(--rps-blue);padding:80px 0;color:#fff;text-align:center;" data-reveal>
-    <div class="container">
-      <h2 style="color:#fff;margin-bottom:16px;">Need any electrical service in ${location.name}?</h2>
-      <p style="opacity:0.85;max-width:520px;margin:0 auto 28px;">Call, WhatsApp, or fill our contact form. We respond within the hour — 24/7.</p>
+  <!-- Other Locations Hubs & Coverage -->
+  <section style="padding:50px 0;background:#ffffff;">
+    <div class="container" style="text-align:center;">
+      <p class="eyebrow eyebrow--dark"><i class="fa-solid fa-map-location-dot"></i> Greater Chennai Service Network</p>
+      <h2>Explore Other Service Locations</h2>
+      <p style="color:var(--text-muted);font-size:0.9rem;margin:8px auto 20px;max-width:540px;">Select an area for localized emergency repair teams and same-day site visits:</p>
+      <div class="keyword-cloud" style="justify-content:center;">
+        ${locations.filter(l => l.slug !== location.slug).map(l => `<a href="${l.slug}.html" class="keyword-pill"><i class="fa-solid fa-location-dot"></i> Services in ${l.name}</a>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section style="background:var(--rps-blue);padding:80px 0;color:#fff;text-align:center;position:relative;overflow:hidden;" data-reveal>
+    <div class="container" style="position:relative;z-index:2;">
+      <h2 style="color:#fff;font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:16px;">Need Electrical or UPS Service in ${isCityWide ? 'Chennai' : location.name}?</h2>
+      <p style="font-size:1.05rem;max-width:560px;margin:0 auto 28px;opacity:0.88;">Contact Royal Power Solutions now for a free, transparent quotation. Rapid response guaranteed.</p>
       <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
         <a href="${depth}contact.html" class="btn btn--gold btn--lg"><i class="fa-solid fa-bolt"></i> Get Free Quote</a>
         <a href="tel:+919787451828" class="btn btn--outline btn--lg" style="border-color:rgba(255,255,255,0.3);color:#fff;"><i class="fa-solid fa-phone"></i> Call 9787451828</a>
-        <a href="https://wa.me/919787451828" target="_blank" rel="noopener" class="btn btn--outline btn--lg" style="border-color:rgba(62,155,62,0.6);color:#fff;background:rgba(62,155,62,0.15);"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://wa.me/919787451828?text=Hi%2C+I+need+service+in+${encodeURIComponent(isCityWide ? 'Chennai' : location.name)}" target="_blank" rel="noopener" class="btn btn--outline btn--lg" style="border-color:rgba(62,155,62,0.6);color:#fff;background:rgba(62,155,62,0.15);"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
       </div>
     </div>
+    <i class="fa-solid fa-bolt" style="position:absolute;right:-5%;bottom:-20%;font-size:300px;opacity:0.05;transform:rotate(15deg);"></i>
   </section>
 
   ${footerHTML(depth)}
@@ -1063,38 +1167,95 @@ function generateSitemap() {
   const baseUrl = 'https://royalpowersolutions.in';
   const today = new Date().toISOString().split('T')[0];
   
-  const mainPages = ['', 'about', 'services', 'gallery', 'contact']
-    .map(p => `  <url>
-    <loc>${baseUrl}/${p ? p + '.html' : ''}</loc>
-    <changefreq>monthly</changefreq>
-    <priority>${p === '' ? '1.0' : '0.8'}</priority>
+  const mainPages = [
+    { loc: '', changefreq: 'weekly', priority: '1.0' },
+    { loc: 'services.html', changefreq: 'weekly', priority: '0.95' },
+    { loc: 'about.html', changefreq: 'monthly', priority: '0.85' },
+    { loc: 'projects.html', changefreq: 'monthly', priority: '0.85' },
+    { loc: 'gallery.html', changefreq: 'monthly', priority: '0.75' },
+    { loc: 'blog.html', changefreq: 'weekly', priority: '0.85' },
+    { loc: 'contact.html', changefreq: 'monthly', priority: '0.85' }
+  ].map(p => `  <url>
+    <loc>${baseUrl}/${p.loc}</loc>
+    <changefreq>${p.changefreq}</changefreq>
+    <priority>${p.priority}</priority>
+    <lastmod>${today}</lastmod>
+  </url>`).join('\n');
+
+  // Core dedicated service pages
+  const coreServices = [
+    'ups-sales-service.html',
+    'ups-repair-amc.html',
+    'ups-installation.html',
+    'battery-sales-service.html',
+    'server-stabilizer.html',
+    'isolation-transformer.html',
+    'solar-installation.html',
+    'electrical-work.html',
+    'ups-shifting.html'
+  ].map(s => `  <url>
+    <loc>${baseUrl}/services/${s}</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
     <lastmod>${today}</lastmod>
   </url>`).join('\n');
 
   const locationHubs = locations.map(l => `  <url>
     <loc>${baseUrl}/locations/${l.slug}.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>${l.slug === 'chennai' ? 'weekly' : 'monthly'}</changefreq>
+    <priority>${l.slug === 'chennai' ? '0.95' : '0.90'}</priority>
     <lastmod>${today}</lastmod>
   </url>`).join('\n');
 
   const landingPages = [];
   for (const location of locations) {
+    const isCh = location.slug === 'chennai';
     for (const service of services) {
       landingPages.push(`  <url>
     <loc>${baseUrl}/${location.slug}/${service.slug}.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>${isCh ? 'weekly' : 'monthly'}</changefreq>
+    <priority>${isCh ? '0.90' : '0.75'}</priority>
     <lastmod>${today}</lastmod>
   </url>`);
     }
   }
 
+  // Blog pages if present
+  let blogPages = '';
+  const blogDir = path.join(__dirname, 'blog');
+  if (fs.existsSync(blogDir)) {
+    blogPages = fs.readdirSync(blogDir)
+      .filter(f => f.endsWith('.html'))
+      .map(f => `  <url>
+    <loc>${baseUrl}/blog/${f}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>${today}</lastmod>
+  </url>`).join('\n');
+  }
+
+  // Project case studies if present
+  let projectPages = '';
+  const projDir = path.join(__dirname, 'projects');
+  if (fs.existsSync(projDir)) {
+    projectPages = fs.readdirSync(projDir)
+      .filter(f => f.endsWith('.html'))
+      .map(f => `  <url>
+    <loc>${baseUrl}/projects/${f}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>${today}</lastmod>
+  </url>`).join('\n');
+  }
+
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${mainPages}
+${coreServices}
 ${locationHubs}
 ${landingPages.join('\n')}
+${blogPages}
+${projectPages}
 </urlset>`;
 }
 

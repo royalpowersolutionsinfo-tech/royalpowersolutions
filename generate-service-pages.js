@@ -178,6 +178,7 @@ function locationLinksSection(slug, serviceTitle) {
     {slug:'west-mambalam',name:'West Mambalam'},
     {slug:'guindy',name:'Guindy'},
     {slug:'saidapet',name:'Saidapet'},
+    {slug:'ambattur',name:'Ambattur'},
     {slug:'chennai',name:'Greater Chennai'}
   ];
   const cards = locs.map(l => `

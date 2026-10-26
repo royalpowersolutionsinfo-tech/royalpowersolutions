@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+<meta charset="utf-8">
+<title>Commercial Quotation & Scope of Work - Royal Power Solutions</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #1f2937;
+    margin: 30px;
+    line-height: 1.5;
+  }
+  h1 {
+    color: #1e3a8a;
+    font-size: 24pt;
+    margin-bottom: 2px;
+  }
+  .subtitle {
+    color: #0e7490;
+    font-size: 11pt;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+  }
+  .info-table th {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 10pt;
+  }
+  .info-table td {
+    background-color: #eff6ff;
+    padding: 10px 12px;
+    font-size: 9.5pt;
+    vertical-align: top;
+    border: 1px solid #cbd5e1;
+  }
+  h2 {
+    color: #1e3a8a;
+    font-size: 13pt;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 5px;
+    margin-top: 25px;
+  }
+  .metric-badge-grid {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0 20px 0;
+  }
+  .metric-badge-grid td {
+    border: 1px solid #cbd5e1;
+    padding: 12px;
+    text-align: center;
+    background: #f8fafc;
+    width: 25%;
+  }
+  .metric-badge-grid .metric-num {
+    font-size: 18pt;
+    font-weight: bold;
+    color: #1e3a8a;
+    display: block;
+  }
+  .metric-badge-grid .metric-label {
+    font-size: 8.5pt;
+    font-weight: 600;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .quote-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .quote-table th {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    padding: 10px 8px;
+    font-size: 9.5pt;
+    border: 1px solid #1e3a8a;
+    text-align: left;
+  }
+  .quote-table td {
+    padding: 8px 10px;
+    font-size: 9pt;
+    border: 1px solid #cbd5e1;
+    vertical-align: top;
+  }
+  .quote-table tr:nth-child(even) td {
+    background-color: #f8fafc;
+  }
+  .col-num { width: 4%; text-align: center; font-weight: bold; }
+  .col-scope { width: 28%; font-weight: bold; color: #1e3a8a; }
+  .col-desc { width: 52%; }
+  .col-price { width: 16%; text-align: right; font-weight: bold; color: #111827; }
+  .total-row td {
+    background-color: #0e7490 !important;
+    color: #ffffff !important;
+    font-weight: bold;
+    font-size: 11pt;
+    padding: 12px 10px;
+  }
+  .highlight-list li {
+    margin-bottom: 7px;
+    font-size: 9.5pt;
+  }
+  .notice-box {
+    background-color: #ecfdf5;
+    border: 1px solid #6ee7b7;
+    border-left: 4px solid #059669;
+    padding: 10px 14px;
+    font-size: 9pt;
+    color: #065f46;
+    margin: 10px 0 15px 0;
+  }
+  .bank-box {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    padding: 15px;
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    font-size: 9pt;
+  }
+  .sign-box {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    font-size: 9pt;
+    float: right;
+  }
+</style>
+</head>
+<body>
+
+<h1>COMMERCIAL QUOTATION & SCOPE OF WORK</h1>
+<div class="subtitle">Complete Digital Presence, Local SEO Engine, Branding & 1-Year Maintenance Package</div>
+
+<table class="info-table">
+  <tr>
+    <th style="width: 50%;">QUOTATION DETAILS</th>
+    <th style="width: 50%;">CLIENT INFORMATION</th>
+  </tr>
+  <tr>
+    <td>
+      <strong>Quote Ref:</strong> RPS-QTN-2026-001-REV1<br>
+      <strong>Date:</strong> September 29, 2026<br>
+      <strong>Validity:</strong> 30 Days<br>
+      <strong>Currency:</strong> INR (₹)
+    </td>
+    <td>
+      <strong>Client:</strong> Royal Power Solutions<br>
+      <strong>Location:</strong> Chennai, Tamil Nadu<br>
+      <strong>Scope:</strong> Website Design, 120 Local SEO Pages, Logo, Google Profile, 1-Year Hosting & Maintenance<br>
+      <strong>Target Market:</strong> Chennai & Surrounding Districts
+    </td>
+  </tr>
+</table>
+
+<!-- Key Metrics Overview Cards -->
+<table class="metric-badge-grid">
+  <tr>
+    <td>
+      <span class="metric-num">158</span>
+      <span class="metric-label">Total Live Pages</span>
+    </td>
+    <td>
+      <span class="metric-num">66</span>
+      <span class="metric-label">SEO Target Keywords</span>
+    </td>
+    <td>
+      <span class="metric-num">1 Year</span>
+      <span class="metric-label">Hosting & Maintenance</span>
+    </td>
+    <td>
+      <span class="metric-num">₹ 50,000</span>
+      <span class="metric-label">Total Project Package</span>
+    </td>
+  </tr>
+</table>
+
+<h2>1. Executive Summary & Deliverables Breakdown (Simple & Detailed)</h2>
+<ul class="highlight-list">
+  <li><strong>Total Pages Built & Indexed (158 Pages Total):</strong>
+    <ul>
+      <li><strong>8 Core Business Pages:</strong> Home, About Us, Services Overview, Projects Showcase, Interactive Gallery, Technical Blog Hub, Contact Us, and Custom 404 Error Page.</li>
+      <li><strong>120 Programmatic Local SEO Landing Pages:</strong> Covers 6 major commercial hubs in Chennai (Guindy, Saidapet, West Mambalam, Ashok Pillar, Jafferkhanpet, Chennai City) across 20 high-demand power services (6 localities × 20 services = 120 dedicated geo-targeted pages).</li>
+      <li><strong>20 Dedicated Service & Product Catalog Pages:</strong> Detailed specification pages for Online UPS (1KVA to 1000KVA), Inverter Batteries, Servo Stabilizers, Isolation Transformers, UPS AMC, and Solar Installations.</li>
+      <li><strong>10 Commercial Projects & Technical Guides:</strong> Case studies and published troubleshooting guides driving organic traffic.</li>
+    </ul>
+  </li>
+  <li><strong>Target Search Keywords (66 Strategically Researched Keywords):</strong>
+    <ul>
+      <li><strong>Brand Keywords (5 keywords):</strong> "Royal Power Solutions", "Royal Power UPS Chennai", etc.</li>
+      <li><strong>High-Priority Commercial Money Keywords (18 keywords):</strong> High-intent search terms like "Online UPS sales Chennai", "UPS battery replacement Chennai", "UPS repair service near me".</li>
+      <li><strong>Local Area Geo-Targeted Keywords (21 keywords):</strong> Pinpoint rankings for Guindy, Saidapet, Ashok Pillar, West Mambalam, and Jafferkhanpet.</li>
+      <li><strong>Industrial & B2B Keywords (14 keywords):</strong> Three-phase UPS AMC, isolation transformer installation, industrial stabilizer rentals.</li>
+      <li><strong>Informational & Blog Keywords (8 keywords):</strong> Common customer queries, error codes, and maintenance guides.</li>
+    </ul>
+  </li>
+  <li><strong>Brand Identity & Logo Design (Included):</strong>
+    <ul>
+      <li>Custom professional vector logo design tailored for Royal Power Solutions.</li>
+      <li>Delivery in all essential formats: Vector (SVG), High-Resolution Transparent PNG, Print-Ready PDF/JPG.</li>
+      <li>Website Favicon, brand color palette codes (Hex/RGB), and typography guidelines.</li>
+    </ul>
+  </li>
+  <li><strong>Google Business Profile (GMB / GBP) Creation & Local Optimization (Included):</strong>
+    <ul>
+      <li>Official Google Business Profile creation, setup, and verification guidance.</li>
+      <li>Accurate Name, Address, Phone (NAP) sync with Google Maps coordinates.</li>
+      <li>Categories selection (UPS Supplier, Electrical Repair, Battery Store), business hours, service areas setup.</li>
+      <li>Geotagged product & work photos upload, complete service list, and 1-click Google Review direct link for customers.</li>
+    </ul>
+  </li>
+  <li><strong>Cloud Hosting & 1-Year Technical Maintenance AMC (Included):</strong>
+    <ul>
+      <li>High-speed cloud server deployment with custom domain mapping and DNS setup.</li>
+      <li>Lifetime HTTPS / SSL encryption certificate installed for high security and Google trust.</li>
+      <li><strong>1 Full Year Technical Maintenance:</strong> Monthly automated cloud backups, 99.9% uptime monitoring, software/script updates, security monitoring, bug fixing, and minor content updates for 12 months.</li>
+    </ul>
+  </li>
+  <li><strong>Lead Generation & Direct Customer Contact (Included):</strong>
+    <ul>
+      <li>1-click floating WhatsApp chat trigger on every single page.</li>
+      <li>Click-to-call emergency direct phone dialers for immediate customer hotline calls.</li>
+      <li>Interactive quotation inquiry forms with instant notification backend.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>2. Detailed Itemized Quotation (Editable)</h2>
+<table class="quote-table">
+  <thead>
+    <tr>
+      <th class="col-num">#</th>
+      <th class="col-scope">Scope / Deliverable</th>
+      <th class="col-desc">Detailed Specifications & Inclusions</th>
+      <th class="col-price">Amount (₹)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="col-num">1</td>
+      <td class="col-scope">Professional Logo Design & Visual Brand Identity</td>
+      <td class="col-desc">
+        • Custom modern logo creation representing power, reliability, and technical expertise<br>
+        • Multiple design concepts and iterative revisions<br>
+        • High-resolution vector files (SVG, PDF) and web formats (transparent PNG, JPEG)<br>
+        • Web browser favicon icon and primary brand color styling guide
+      </td>
+      <td class="col-price">₹ 4,000</td>
+    </tr>
+    <tr>
+      <td class="col-num">2</td>
+      <td class="col-scope">Google Business Profile (GBP / GMB) Creation & Setup</td>
+      <td class="col-desc">
+        • Professional Google Business Profile setup, category mapping, and verification setup<br>
+        • Exact Google Maps pin localization, service areas (Chennai Central, Guindy, Saidapet, etc.)<br>
+        • Upload of business photos, branding graphics, product categories & contact details<br>
+        • Instant 1-click customer Google Review link generation for review collection
+      </td>
+      <td class="col-price">₹ 3,000</td>
+    </tr>
+    <tr>
+      <td class="col-num">3</td>
+      <td class="col-scope">Core Website UI/UX Design & Frontend Development (8 Pages)</td>
+      <td class="col-desc">
+        • Responsive, mobile-first design across smartphones, tablets, laptops, and desktops<br>
+        • Lightweight modern architecture (HTML5, CSS3, Vanilla JS) for ultra-fast loading speed<br>
+        • 8 Core Pages: Home, About Us, Services, Projects, Gallery, Blog, Contact, Custom 404<br>
+        • Conversion-optimized layout with sticky navigation, trust badges, and hero callouts
+      </td>
+      <td class="col-price">₹ 12,000</td>
+    </tr>
+    <tr>
+      <td class="col-num">4</td>
+      <td class="col-scope">Service & Product Catalog Showcase Module</td>
+      <td class="col-desc">
+        • 20 dedicated service & product pages detailing technical specifications<br>
+        • Full coverage: 1KVA to 1000KVA Online UPS, Batteries, AMC, Stabilizers, Transformers, Solar<br>
+        • Interactive completed projects portfolio showcase and photo gallery<br>
+        • Partner brand trust badges (Numeric, APC by Schneider, Emerson/Vertiv, Exide, Amaron)
+      </td>
+      <td class="col-price">₹ 6,000</td>
+    </tr>
+    <tr>
+      <td class="col-num">5</td>
+      <td class="col-scope">Programmatic Local SEO Engine (120 Chennai Area Pages)</td>
+      <td class="col-desc">
+        • Automated local search landing page engine targeting 6 prime Chennai commercial hubs:<br>
+        &nbsp;&nbsp;1. Guindy Industrial Hub & surrounds &nbsp;|&nbsp; 2. Saidapet & South Chennai<br>
+        &nbsp;&nbsp;3. West Mambalam & T. Nagar &nbsp;|&nbsp; 4. Ashok Pillar & KK Nagar<br>
+        &nbsp;&nbsp;5. Jafferkhanpet & Vadapalani &nbsp;|&nbsp; 6. Greater Chennai Citywide<br>
+        • 20 dedicated service landing pages per locality (Total 120 Geo-targeted pages)<br>
+        • Area-specific H1 titles, customized local intros, geo-coordinates, and local service FAQs
+      </td>
+      <td class="col-price">₹ 10,000</td>
+    </tr>
+    <tr>
+      <td class="col-num">6</td>
+      <td class="col-scope">SEO Strategy, Keyword Research (66 Keywords) & Technical SEO</td>
+      <td class="col-desc">
+        • 66 high-intent keywords across Brand, Commercial Money, Geo Local, B2B, and Blog categories<br>
+        • XML Sitemap generated with 158 live indexable URLs and submitted to Google Search Console<br>
+        • Optimized robots.txt crawler directives and canonical tags<br>
+        • Schema.org structured data (LocalBusiness, Service, Breadcrumbs, Star Rating rich snippets)
+      </td>
+      <td class="col-price">₹ 5,000</td>
+    </tr>
+    <tr>
+      <td class="col-num">7</td>
+      <td class="col-scope">Lead Generation & Instant Conversion Tools</td>
+      <td class="col-desc">
+        • Floating WhatsApp 1-click chat trigger button active across all 158 pages<br>
+        • Click-to-call emergency hotline buttons for direct phone call generation<br>
+        • Interactive quotation request forms and inquiry capture with email/API notifications<br>
+        • Embedded interactive Google Maps for local shop trust and direct navigation
+      </td>
+      <td class="col-price">₹ 3,000</td>
+    </tr>
+    <tr>
+      <td class="col-num">8</td>
+      <td class="col-scope">1-Year Cloud Hosting & Complete Maintenance (12 Months Included)</td>
+      <td class="col-desc">
+        • 1 Full Year high-speed cloud hosting server deployment & domain DNS integration<br>
+        • Lifetime HTTPS / SSL security certificate integration<br>
+        • <strong>1 Full Year Technical AMC & Maintenance:</strong> Regular monthly cloud backups, uptime monitoring, security patching, bug fixes, and minor content updates for 12 continuous months
+      </td>
+      <td class="col-price">₹ 7,000</td>
+    </tr>
+    <tr class="total-row">
+      <td colspan="3" style="text-align: right; font-size: 11pt;">TOTAL ALL-INCLUSIVE PACKAGE AMOUNT:</td>
+      <td style="text-align: right; font-size: 12pt;">₹ 50,000</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="notice-box">
+  <strong>✓ ALL-INCLUSIVE PACKAGE GUARANTEE:</strong> This quotation includes complete web development, 158 pages, 66 keywords, logo design, Google Business Profile creation, and 1 full year of cloud hosting & technical maintenance for a fixed total of <strong>₹ 50,000 only</strong>. There are no hidden or surprise charges.
+</div>
+
+<h2>3. Ongoing Renewal Terms (Applicable After 1st Year)</h2>
+<table class="quote-table">
+  <thead>
+    <tr>
+      <th style="width: 5%;">#</th>
+      <th style="width: 28%;">Service Name</th>
+      <th style="width: 44%;">Scope of Support</th>
+      <th style="width: 10%;">Period</th>
+      <th style="width: 13%; text-align: right;">Amount (₹)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="col-num">A</td>
+      <td style="font-weight: bold; color: #1e3a8a;">Annual Hosting, SSL & Technical Maintenance (Year 2 Onwards)</td>
+      <td>Cloud server renewal, domain renewal support, SSL maintenance, monthly backups, 99.9% uptime monitoring, and security maintenance. <em>(Note: Year 1 is 100% FREE & INCLUDED in the ₹ 50,000 package).</em></td>
+      <td>Annual</td>
+      <td class="col-price">₹ 8,000 / yr</td>
+    </tr>
+    <tr>
+      <td class="col-num">B</td>
+      <td style="font-weight: bold; color: #1e3a8a;">Monthly Local SEO & Keyword Rank Tracking (Optional)</td>
+      <td>Monthly keyword ranking audit for all 66 keywords, Google Search Console monitoring, Google Business Profile monthly updates, and 2 fresh SEO blog articles monthly.</td>
+      <td>Monthly</td>
+      <td class="col-price">₹ 7,500 / mo</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>4. Payment Terms & Milestones</h2>
+<ul class="highlight-list">
+  <li><strong>Milestone 1 — Advance Booking / Project Initiation (40%):</strong> ₹ 20,000 — Payable upon quotation sign-off to initiate logo design, domain configuration, and website structure.</li>
+  <li><strong>Milestone 2 — Design, Core Pages & Google Profile Approval (30%):</strong> ₹ 15,000 — Payable upon review and approval of custom logo, core 8 pages, and Google Business Profile setup.</li>
+  <li><strong>Milestone 3 — Final Delivery, 120 Local SEO Pages & 1-Year Live Handover (30%):</strong> ₹ 15,000 — Payable upon completion of all 120 programmatic pages, technical SEO audit, and 1-year live hosting handover.</li>
+</ul>
+
+<h2>5. Payment Details & Client Acceptance</h2>
+<div style="width: 100%; margin-top: 15px;">
+  <div class="bank-box">
+    <strong>PAYMENT DETAILS (NEFT / UPI / IMPS)</strong><br><br>
+    <strong>Account Name:</strong> [Your Name / Company Name]<br>
+    <strong>Bank Name:</strong> [Your Bank Name]<br>
+    <strong>Account Number:</strong> [Enter Account Number]<br>
+    <strong>IFSC Code:</strong> [Enter IFSC Code]<br>
+    <strong>UPI ID / GPay / PhonePe:</strong> [Enter UPI ID / Mobile Number]
+  </div>
+  <div class="sign-box">
+    <strong>CLIENT ACCEPTANCE & SIGNATURE</strong><br><br>
+    <strong>Accepted By:</strong> ____________________________<br><br>
+    <strong>Designation:</strong> ____________________________<br><br>
+    <strong>Signature:</strong> ______________________________<br><br>
+    <strong>Date:</strong> ___________________________________
+  </div>
+</div>
+
+</body>
+</html>
