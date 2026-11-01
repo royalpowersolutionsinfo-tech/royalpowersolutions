@@ -1272,13 +1272,17 @@ function generateSitemap() {
   const landingPages = [];
   for (const location of locations) {
     const isCh = location.slug === 'chennai';
-    for (const service of services) {
-      landingPages.push(`  <url>
-    <loc>${baseUrl}/${location.slug}/${service.slug}.html</loc>
+    const locDir = path.join(__dirname, location.slug);
+    if (fs.existsSync(locDir)) {
+      const pageFiles = fs.readdirSync(locDir).filter(f => f.endsWith('.html'));
+      for (const file of pageFiles) {
+        landingPages.push(`  <url>
+    <loc>${baseUrl}/${location.slug}/${file}</loc>
     <changefreq>${isCh ? 'weekly' : 'monthly'}</changefreq>
-    <priority>${isCh ? '0.90' : '0.75'}</priority>
+    <priority>${isCh ? '0.90' : '0.80'}</priority>
     <lastmod>${today}</lastmod>
   </url>`);
+      }
     }
   }
 
