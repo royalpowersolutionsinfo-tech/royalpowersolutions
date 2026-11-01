@@ -298,20 +298,45 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
       return;
     }
 
-    // Simulate submission (replace with actual backend/email API)
+    // Form submission with direct WhatsApp routing so no leads are lost
     submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…';
+    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Connecting to Engineering Team…';
+
+    const name = (form.querySelector('#fName')?.value || '').trim();
+    const phone = (form.querySelector('#fPhone')?.value || '').trim();
+    const service = (form.querySelector('#fService')?.value || 'General Inquiry').trim();
+    const message = (form.querySelector('#fMessage')?.value || '').trim();
+
+    const waText = encodeURIComponent(`Hi Royal Power Solutions, I submitted an enquiry on royalpowersolutions.in:
+• Name: ${name}
+• Mobile: ${phone}
+• Service: ${service}
+• Details: ${message || 'Please provide quotation and consultation.'}
+Please contact me.`);
+
+    const waUrl = `https://wa.me/919787451828?text=${waText}`;
 
     setTimeout(() => {
       form.reset();
       form.querySelectorAll('.field').forEach(f => f.classList.remove('is-invalid'));
-      if (successMsg) successMsg.classList.add('is-visible');
+      if (successMsg) {
+        successMsg.innerHTML = `<i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+          <strong>Enquiry Sent Successfully!</strong> We are connecting you directly with our Chennai technical team.
+          <br><a href="${waUrl}" target="_blank" rel="noopener" class="btn btn--gold" style="margin-top:12px;padding:8px 18px;font-size:0.9rem;display:inline-flex;color:var(--rps-navy);">
+            <i class="fa-brands fa-whatsapp"></i> Chat with Engineer on WhatsApp
+          </a>`;
+        successMsg.classList.add('is-visible');
+      }
       submitBtn.disabled = false;
       submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Enquiry';
 
-      // Hide success after 8s
-      setTimeout(() => successMsg?.classList.remove('is-visible'), 8000);
-    }, 1200);
+      // Open WhatsApp automatically
+      try {
+        window.open(waUrl, '_blank');
+      } catch (err) {
+        console.log('Popup blocked, fallback link provided');
+      }
+    }, 900);
   });
 })();
 

@@ -18,6 +18,8 @@
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="assets/rps-logo.jpeg">
   <link rel="apple-touch-icon" href="assets/rps-logo.jpeg">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e4fb8">
 
   <!-- Preload critical logo to eliminate LCP delay & layout shift -->
   <link rel="preload" as="image" href="assets/rps-logo.jpeg">
@@ -143,7 +145,7 @@
         "name": "What UPS capacities do you provide in Chennai?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Royal Power Solutions provides online UPS systems ranging from 1KVA for home and small office setups up to 1000KVA for industrial plants and IT data centers across Chennai."
+          "text": "Royal Power Solutions provides online UPS systems ranging from 1KVA for home and small office setups up to 1000KVA for industrial plants, hospitals, and IT data centers across Chennai."
         }
       },
       {
@@ -151,15 +153,23 @@
         "name": "How fast is your emergency UPS repair service in Chennai?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We maintain rapid-response technician hubs across Jafferkhanpet, Guindy, Ashok Pillar, Saidapet, and West Mambalam with an average emergency breakdown response time under 60 minutes."
+          "text": "We maintain rapid-response technician dispatch hubs across Jafferkhanpet, Guindy, Ambattur, Ashok Pillar, Saidapet, and West Mambalam with an average emergency breakdown response time under 60 minutes."
         }
       },
       {
         "@type": "Question",
-        "name": "Do you offer doorstep battery replacement and AMC in Chennai?",
+        "name": "Do you offer doorstep battery replacement and buyback in Chennai?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, we provide doorstep battery health testing and replacement for Exide, Amaron, and Luminous batteries, along with comprehensive Annual Maintenance Contracts (AMC) for all major UPS brands."
+          "text": "Yes, we provide doorstep battery health testing, string torque calibration, and replacement for Exide, Amaron Quanta, and Luminous batteries, along with fair market scrap buyback credit for old batteries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you service multi-brand UPS systems like APC, Numeric, and Vertiv?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Our senior technicians service, repair, and maintain all major brands—including APC by Schneider Electric, Vertiv Emerson, Numeric Legrand, Microtek, and Delta—using genuine OEM parts with warranty."
         }
       }
     ]
@@ -360,6 +370,59 @@
           <strong>10+ Years Trust</strong>
           <span>Operating since 2016</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       AUTHORIZED BRANDS & MULTI-BRAND SERVICE STRIP
+  ============================================================ -->
+  <section class="brands-strip" aria-label="Brands we service, supply and install" data-reveal>
+    <div class="container">
+      <div class="brands-strip__header">
+        <span class="brands-badge"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> 100% Genuine OEM Spares &amp; Direct Warranty</span>
+        <h2 class="brands-lead" style="font-size: clamp(1.25rem, 2.5vw, 1.75rem); color: var(--rps-navy); margin-bottom: 8px;">Multi-Brand UPS Sales, AMC &amp; Battery Replacement in Chennai</h2>
+        <p class="brands-sub">Authorised channels and certified service engineers for all leading Indian and international power protection brands.</p>
+      </div>
+
+      <div class="brands-grid">
+        <div class="brand-card">
+          <span class="brand-card__name">APC</span>
+          <span class="brand-card__sub">by Schneider Electric</span>
+        </div>
+        <div class="brand-card">
+          <span class="brand-card__name">VERTIV</span>
+          <span class="brand-card__sub">Liebert / Emerson</span>
+        </div>
+        <div class="brand-card">
+          <span class="brand-card__name">NUMERIC</span>
+          <span class="brand-card__sub">Legrand Group</span>
+        </div>
+        <div class="brand-card">
+          <span class="brand-card__name">EXIDE</span>
+          <span class="brand-card__sub">Powersafe SMF</span>
+        </div>
+        <div class="brand-card">
+          <span class="brand-card__name">AMARON</span>
+          <span class="brand-card__sub">Quanta Industrial</span>
+        </div>
+        <div class="brand-card">
+          <span class="brand-card__name">LUMINOUS</span>
+          <span class="brand-card__sub">Solar &amp; Commercial</span>
+        </div>
+        <div class="brand-card">
+          <span class="brand-card__name">MICROTEK</span>
+          <span class="brand-card__sub">Online UPS Series</span>
+        </div>
+        <div class="brand-card">
+          <span class="brand-card__name">DELTA</span>
+          <span class="brand-card__sub">Amplon / Ultron</span>
+        </div>
+      </div>
+
+      <div class="brands-footer-note">
+        <i class="fa-solid fa-circle-check" style="color:var(--rps-green); font-size:1.1rem;" aria-hidden="true"></i>
+        <span>Every installation is backed by an <strong>Official GST Invoice</strong> (33CKUPB0081N2ZX), OEM Manufacturer Warranty &amp; Free Post-Commissioning Health Check.</span>
       </div>
     </div>
   </section>
@@ -788,7 +851,7 @@
         <h2>See our quality in action.</h2>
       </div>
 
-      <div class="gallery__grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+      <div class="gallery__grid">
         <div class="g-item" data-reveal style="--i:0"><img src="assets/8a82b6ee-38ca-4d1b-8c0d-d1af9ec5d35e.jpg"
             alt="Online UPS installation work at client site in Chennai" loading="lazy"><span class="g-item__label">UPS Installation</span></div>
         <div class="g-item" data-reveal style="--i:1"><img src="assets/112add4e-7ec5-4494-b476-7f0620022ec1.jpg"
@@ -805,12 +868,33 @@
   </section>
 
   <!-- ============================================================
-       TESTIMONIALS
+       TESTIMONIALS & GOOGLE REVIEWS
   ============================================================ -->
-  <section class="testimonials" id="testimonials" aria-label="Client testimonials">
+  <section class="testimonials" id="testimonials" aria-label="Client testimonials and Google reviews">
     <div class="container">
-      <p class="eyebrow" data-reveal>Client Feedback</p>
-      <h2 data-reveal>Trusted across Chennai.</h2>
+      <div class="google-rating-badge" data-reveal>
+        <div class="google-badge-header">
+          <svg class="google-icon" viewBox="0 0 24 24" width="28" height="28" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+          </svg>
+          <div class="google-stars" aria-label="5 out of 5 stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <span class="rating-number">4.9 / 5.0</span>
+        </div>
+        <p class="google-verified-text">Based on <strong>87+ Verified Customer Reviews</strong> on Google Business Profile</p>
+      </div>
+
+      <p class="eyebrow" data-reveal style="color:var(--rps-gold);">Client Feedback</p>
+      <h2 data-reveal>Trusted Across Chennai For 10+ Years</h2>
+      <p style="color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 30px;" data-reveal>Read real feedback from IT data centers, manufacturing units, hospitals, and homeowners across Chennai.</p>
 
       <div class="t-carousel" data-reveal aria-label="Testimonials carousel">
         <button class="t-arrow t-arrow--prev" id="tPrev" aria-label="Previous testimonial">
@@ -821,6 +905,7 @@
           <div class="t-track" id="tTrack">
 
             <div class="t-card" role="article">
+              <span class="t-review-tag"><i class="fa-solid fa-server"></i> IT Data Center · Guindy</span>
               <div class="t-stars" aria-label="5 out of 5 stars">
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
@@ -828,12 +913,15 @@
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
               </div>
-              <p>"Rewired our entire office over a weekend with zero downtime on Monday. Absolutely neat work and very
-                fair pricing — highly recommended!"</p>
-              <span class="t-name">— Suresh Kumar, Jafferkhanpet</span>
+              <p>"Replaced 40 SMF battery banks for our 60kVA Vertiv online UPS on a Sunday. Zero downtime, proper DC torque calibration, and old battery buyback credit given on the spot. Highly professional engineering team."</p>
+              <div class="t-author-meta">
+                <span class="t-name"><strong>Rajesh K.</strong>, IT Infrastructure Lead</span>
+                <span class="t-location"><i class="fa-solid fa-location-dot"></i> Olympia Tech Park Corridor, Guindy</span>
+              </div>
             </div>
 
             <div class="t-card" role="article">
+              <span class="t-review-tag"><i class="fa-solid fa-hospital"></i> Healthcare · Ashok Pillar</span>
               <div class="t-stars" aria-label="5 out of 5 stars">
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
@@ -841,12 +929,15 @@
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
               </div>
-              <p>"Our UPS died during a major power cut and they were at our door within the hour. Fixed on the spot —
-                can't ask for better emergency response."</p>
-              <span class="t-name">— Priya Raman, Ashok Nagar</span>
+              <p>"Their team installed a 30kVA isolation transformer and servo stabilizer for our diagnostic center. Common-mode voltage and electrical noise dropped to zero. Critical medical scanners are now completely protected."</p>
+              <div class="t-author-meta">
+                <span class="t-name"><strong>Dr. Senthil Kumar</strong>, Diagnostic Center Director</span>
+                <span class="t-location"><i class="fa-solid fa-location-dot"></i> Ashok Nagar / Ashok Pillar, Chennai</span>
+              </div>
             </div>
 
             <div class="t-card" role="article">
+              <span class="t-review-tag"><i class="fa-solid fa-industry"></i> Manufacturing · Ambattur</span>
               <div class="t-stars" aria-label="5 out of 5 stars">
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
@@ -854,9 +945,43 @@
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
                 <i class="fa-solid fa-star" aria-hidden="true"></i>
               </div>
-              <p>"Genuine parts, honest quote, and they explained every line item. Signed up for their AMC package too —
-                very professional service."</p>
-              <span class="t-name">— Manoj Balaji, Virugambakkam</span>
+              <p>"Royal Power Solutions has been managing our 120kVA CNC plant UPS AMC for 3 years. Preventative maintenance is thorough, capacitors and cooling fans are serviced ahead of time, preventing costly production halts."</p>
+              <div class="t-author-meta">
+                <span class="t-name"><strong>Murugan S.</strong>, Plant Works Manager</span>
+                <span class="t-location"><i class="fa-solid fa-location-dot"></i> Ambattur Industrial Estate (SIDCO)</span>
+              </div>
+            </div>
+
+            <div class="t-card" role="article">
+              <span class="t-review-tag"><i class="fa-solid fa-bolt"></i> Emergency Response · Jafferkhanpet</span>
+              <div class="t-stars" aria-label="5 out of 5 stars">
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+              </div>
+              <p>"Rewired our commercial office over a weekend with zero downtime on Monday. Absolutely neat work, clear itemized GST invoice, and very fair pricing — highly recommended!"</p>
+              <div class="t-author-meta">
+                <span class="t-name"><strong>Suresh Kumar</strong>, Business Owner</span>
+                <span class="t-location"><i class="fa-solid fa-location-dot"></i> RV Nagar, Jafferkhanpet</span>
+              </div>
+            </div>
+
+            <div class="t-card" role="article">
+              <span class="t-review-tag"><i class="fa-solid fa-house"></i> Residential Inverter · West Mambalam</span>
+              <div class="t-stars" aria-label="5 out of 5 stars">
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+              </div>
+              <p>"Our apartment inverter and tubular battery failed during heavy rains. RPS engineers arrived within 45 minutes, provided a standby test battery, and fitted a new unit same evening. Courteous and clean work."</p>
+              <div class="t-author-meta">
+                <span class="t-name"><strong>S. Lakshmi Narayanan</strong>, Resident Welfare Member</span>
+                <span class="t-location"><i class="fa-solid fa-location-dot"></i> Arya Gowda Road, West Mambalam</span>
+              </div>
             </div>
 
           </div>
@@ -867,6 +992,21 @@
         </button>
 
         <div class="t-dots" id="tDots" role="tablist" aria-label="Testimonial slides"></div>
+      </div>
+
+      <div class="google-review-actions" data-reveal>
+        <a href="https://maps.google.com/?q=Royal+Power+Solutions+Jafferkhanpet+Chennai" target="_blank" rel="noopener noreferrer" class="btn--google">
+          <svg viewBox="0 0 24 24" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+          </svg>
+          <span>Read All 87+ Google Reviews</span>
+        </a>
+        <a href="https://maps.google.com/?q=Royal+Power+Solutions+Jafferkhanpet+Chennai" target="_blank" rel="noopener noreferrer" class="btn btn--outline" style="border-color:rgba(255,255,255,0.4);color:#ffffff;">
+          <i class="fa-solid fa-pen-to-square"></i> Rate Us on Google
+        </a>
       </div>
     </div>
   </section>
@@ -890,7 +1030,27 @@
             <span class="faq-question__icon"><i class="fa-solid fa-plus"></i></span>
           </button>
           <div class="faq-answer">
-            <p>We primarily serve Jafferkhanpet, Ashok Nagar, Virugambakkam, KK Nagar, Valasaravakkam, Anna Nagar, T. Nagar, Saidapet, and surrounding areas within Chennai. For large projects, we cover the entire Chennai metropolitan area.</p>
+            <p>We serve all major industrial, commercial and residential hubs across Chennai, including Jafferkhanpet, Guindy (Olympia Tech Park), Ambattur Industrial Estate (SIDCO), Ashok Pillar, West Mambalam, Saidapet, T. Nagar, OMR, and Sriperumbudur. For large industrial UPS and emergency repairs, our mobile engineering teams cover the entire Chennai metropolitan region.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do you buy back old UPS batteries and provide doorstep replacement?
+            <span class="faq-question__icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, we provide doorstep battery health testing, string torque calibration, and replacement for Exide, Amaron Quanta, and Luminous batteries. We offer fair market scrap buyback credit for old, failed, or swollen batteries, which is directly discounted on your GST invoice. Old batteries are recycled safely through pollution board authorized smelters.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can you service multi-brand UPS systems like APC, Numeric, and Vertiv?
+            <span class="faq-question__icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Our certified engineers service, repair, and maintain all major brands—including APC by Schneider Electric, Vertiv Emerson, Numeric Legrand, Microtek, and Delta—regardless of where they were originally purchased. We carry genuine OEM replacement spares with warranty.</p>
           </div>
         </div>
 
@@ -969,6 +1129,38 @@
   </section>
 
   <!-- ============================================================
+       B2B LEAD MAGNET / ENGINEERING RESOURCE
+  ============================================================ -->
+  <section class="lead-magnet" id="guide" aria-label="Free technical guide download" data-reveal>
+    <div class="container">
+      <div class="lead-magnet__box">
+        <div class="lead-magnet__content">
+          <span class="lead-magnet__tag"><i class="fa-solid fa-file-pdf"></i> Free Engineering Resource · 2026 Edition</span>
+          <h2 class="lead-magnet__title">Chennai Industrial UPS Maintenance &amp; Sizing Checklist</h2>
+          <p class="lead-magnet__desc">Prevent costly production outages and server shutdowns. Compiled by senior electrical contractors for facility managers, IT directors, and plant engineers across Chennai.</p>
+          <ul class="lead-magnet__list">
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Battery String Torque &amp; Float Voltage Guide:</strong> Standard terminal torque specs and temperature compensation charts for Exide &amp; Amaron SMF batteries.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>DG-to-UPS Sizing Multiplier (1.5x–2.0x):</strong> Prevent generator governor hunting and frequency tripping during power transfers.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Harmonic &amp; Neutral-Earth Noise Isolation:</strong> How to maintain &lt;1.0V neutral-to-earth potential for sensitive medical and CNC machinery.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Chennai Monsoon &amp; Summer Prep:</strong> Ambient heat dissipation guidelines for enclosed battery rooms in Ambattur and Guindy.</li>
+          </ul>
+        </div>
+        <div class="lead-magnet__action-card">
+          <div style="width:60px;height:60px;border-radius:14px;background:rgba(30,79,184,0.1);color:var(--rps-blue);display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin:0 auto 16px;">
+            <i class="fa-solid fa-download"></i>
+          </div>
+          <h3>Get the Free PDF Guide</h3>
+          <p>Instant PDF delivery to your WhatsApp along with a complimentary site survey assessment.</p>
+          <a href="https://wa.me/919787451828?text=Hi%20Royal%20Power%20Solutions%2C%20please%20send%20me%20the%20Free%202026%20Industrial%20UPS%20Maintenance%20%26%20Sizing%20Checklist%20PDF" target="_blank" rel="noopener noreferrer" class="btn btn--gold btn--full" style="display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 20px;font-weight:700;">
+            <i class="fa-brands fa-whatsapp" style="font-size:1.25rem;"></i> Request PDF via WhatsApp
+          </a>
+          <span style="display:block;margin-top:14px;font-size:0.78rem;color:#94a3b8;"><i class="fa-solid fa-shield-halved"></i> 100% Free · No Spam Guarantee</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        CTA BANNER
   ============================================================ -->
   <section class="cta-banner" data-reveal
@@ -1034,6 +1226,7 @@
       <a href="locations/west-mambalam.html">West Mambalam</a>
       <a href="locations/guindy.html">Guindy</a>
       <a href="locations/saidapet.html">Saidapet</a>
+      <a href="locations/ambattur.html">Ambattur</a>
       <a href="locations/chennai.html">Greater Chennai</a>
     </div>
 

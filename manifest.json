@@ -1,0 +1,25 @@
+{
+  "name": "Royal Power Solutions Chennai",
+  "short_name": "Royal Power",
+  "description": "Commercial & Industrial UPS Sales, Installation, 24/7 Repair & AMC, Stabilizers & Battery Services in Chennai.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0d1b3e",
+  "theme_color": "#1e4fb8",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/rps-logo.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/rps-logo.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}

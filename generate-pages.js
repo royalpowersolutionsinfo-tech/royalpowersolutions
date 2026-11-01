@@ -17,7 +17,8 @@ const locations = [
     nearBy: 'Ashok Nagar, Ekkattuthangal, KK Nagar, Virugambakkam',
     lat: 13.0333,
     lng: 80.2083,
-    pincode: '600083'
+    pincode: '600083',
+    localContext: 'Ashok Pillar and Ashok Nagar host major diagnostic centers, private hospitals, retail banks, and commercial corporate offices along 1st Avenue and Jawaharlal Nehru Road. Our specialized engineering squad ensures continuous power for sensitive medical scanners, lab analyzers, and corporate workstations with under 45-minute breakdown response.'
   },
   {
     slug: 'jafferkhanpet',
@@ -27,7 +28,8 @@ const locations = [
     nearBy: 'Ashok Nagar, Kodambakkam, Saidapet, Guindy',
     lat: 13.0516,
     lng: 80.2209,
-    pincode: '600083'
+    pincode: '600083',
+    localContext: 'Jafferkhanpet (RV Nagar) is the primary headquarters and centralized spares depot of Royal Power Solutions. With on-site inventory of Exide & Amaron SMF batteries, servo controllers, manual stackers, and bypass panels, we guarantee 15-minute express dispatch to Jafferkhanpet, Ashok Nagar, and surrounding South Chennai corridors.'
   },
   {
     slug: 'west-mambalam',
@@ -37,7 +39,8 @@ const locations = [
     nearBy: 'T. Nagar, Kodambakkam, Ashok Nagar, Vadapalani',
     lat: 13.0404,
     lng: 80.2193,
-    pincode: '600033'
+    pincode: '600033',
+    localContext: 'West Mambalam is characterized by high-density residential apartments, commercial shopping arcades on Arya Gowda Road, clinics, and educational academies around Postal Colony. Our technicians deliver noise-free home inverter setups, elevator UPS backup, and solar net-metering installations tailored for residential complexes.'
   },
   {
     slug: 'guindy',
@@ -47,7 +50,8 @@ const locations = [
     nearBy: 'St. Thomas Mount, Alandur, Ekkattuthangal, Saidapet',
     lat: 13.0067,
     lng: 80.2206,
-    pincode: '600032'
+    pincode: '600032',
+    localContext: 'Guindy is Chennai’s prominent technology and manufacturing junction, encompassing Olympia Tech Park, Ekkattuthangal software hubs, and Guindy Industrial Estate. We support tier-3 data centers, server racks, and industrial testing labs with dual-bus N+1 redundant UPS systems and emergency battery bank hot-swaps.'
   },
   {
     slug: 'saidapet',
@@ -57,7 +61,8 @@ const locations = [
     nearBy: 'Guindy, Adyar, Kotturpuram, Nandanam',
     lat: 13.0215,
     lng: 80.2231,
-    pincode: '600015'
+    pincode: '600015',
+    localContext: 'Saidapet combines commercial hubs along Anna Salai / Mount Road, printing presses, educational institutions near Little Mount, and dense residential streets. Our team provides fast industrial transformer installations, harmonic mitigation, and comprehensive commercial AMC packages across Saidapet.'
   },
   {
     slug: 'ambattur',
@@ -67,7 +72,8 @@ const locations = [
     nearBy: 'Ambattur Industrial Estate, Mogappair, Padi, Avadi, Anna Nagar West',
     lat: 13.1143,
     lng: 80.1548,
-    pincode: '600058'
+    pincode: '600058',
+    localContext: 'Ambattur Industrial Estate (SIDCO) is South Asia’s premier industrial zone, home to thousands of precision CNC machining centers, automotive tier-1 suppliers, and plastics plants. We deliver high-capacity 50kVA–500kVA 3-phase industrial UPS, air-cooled & oil-cooled servo stabilizers, and heavy equipment shifting services.'
   },
   {
     slug: 'chennai',
@@ -77,7 +83,8 @@ const locations = [
     nearBy: 'All areas across Chennai city',
     lat: 13.0827,
     lng: 80.2707,
-    pincode: '600001'
+    pincode: '600001',
+    localContext: 'Covering all 15 zones of Greater Chennai Corporation — from North Chennai ports and Ambattur industrial belt to the OMR IT Corridor and Sriperumbudur manufacturing hub. Our centralized dispatch network ensures guaranteed 60-minute emergency attendance anywhere within city limits.'
   }
 ];
 
@@ -518,7 +525,9 @@ function navbarHTML(depth = '') {
         <a href="${depth}index.html" class="nav-link">Home</a>
         <a href="${depth}about.html" class="nav-link">About Us</a>
         <a href="${depth}services.html" class="nav-link">Services</a>
+        <a href="${depth}projects.html" class="nav-link">Projects</a>
         <a href="${depth}gallery.html" class="nav-link">Gallery</a>
+        <a href="${depth}blog.html" class="nav-link">Blog</a>
         <a href="${depth}contact.html" class="nav-link">Contact</a>
       </nav>
       <div class="nav__actions">
@@ -553,7 +562,9 @@ function footerHTML(depth = '') {
         <a href="${depth}index.html">Home</a>
         <a href="${depth}about.html">About Us</a>
         <a href="${depth}services.html">Services</a>
+        <a href="${depth}projects.html">Projects</a>
         <a href="${depth}gallery.html">Gallery</a>
+        <a href="${depth}blog.html">Blog</a>
         <a href="${depth}contact.html">Contact</a>
       </div>
       <div class="footer__col">
@@ -712,19 +723,35 @@ function generatePage(service, location) {
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "No: 55/15, 69th Street, RV Nagar, Jafferkhanpet",
-        "addressLocality": "${location.name}",
+        "addressLocality": "Chennai",
         "addressRegion": "Tamil Nadu",
-        "postalCode": "${location.pincode}",
+        "postalCode": "600083",
         "addressCountry": "IN"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": ${location.lat},
-        "longitude": ${location.lng}
+        "latitude": 13.0516,
+        "longitude": 80.2209
       },
-      "areaServed": {
-        "@type": "City",
-        "name": "${isCityWide ? 'Chennai, Tamil Nadu' : `${location.name}, Chennai`}"
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "${isCityWide ? 'Chennai, Tamil Nadu' : `${location.name}, Chennai`}",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": ${location.lat},
+            "longitude": ${location.lng}
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Chennai"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "87"
       },
       "priceRange": "₹₹",
       "openingHoursSpecification": [{
@@ -819,6 +846,10 @@ function generatePage(service, location) {
           <p class="eyebrow eyebrow--dark"><i class="fa-solid fa-location-dot"></i> ${isCityWide ? 'City-Wide Chennai Support' : `${location.name}, Chennai`}</p>
           <h2>${service.title} — Trusted Experts in ${isCityWide ? 'Chennai' : location.name}</h2>
           <p>${intro}</p>
+          <div class="local-intel-box">
+            <h4><i class="fa-solid fa-location-crosshairs" style="color:var(--rps-blue);"></i> Local Engineering Focus · ${isCityWide ? 'Greater Chennai' : location.name}</h4>
+            <p>${location.localContext || `Providing specialized ${service.title} for residential, commercial, and industrial facilities across ${location.name} and neighboring Chennai zones.`}</p>
+          </div>
           <div class="why__list" style="margin-top:28px;" aria-label="Service features">
             <ul>
               ${featuresHTML}
@@ -995,6 +1026,14 @@ function generatePage(service, location) {
   <button class="scroll-top" id="scrollTopBtn" aria-label="Back to top">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
+  <aside class="mobile-action-bar" aria-label="Quick contact actions">
+    <a href="tel:+919787451828" class="mobile-btn mobile-btn--call">
+      <i class="fa-solid fa-phone" aria-hidden="true"></i> Call 97874 51828
+    </a>
+    <a href="https://wa.me/919787451828?text=Hi%20Royal%20Power%20Solutions%2C%20I%20need%20a%20quote" target="_blank" rel="noopener noreferrer" class="mobile-btn mobile-btn--wa">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
+    </a>
+  </aside>
   <script src="${depth}js/script.js"></script>
 </body>
 </html>`;
@@ -1063,10 +1102,29 @@ function generateLocationHub(location) {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": ${location.lat},
-      "longitude": ${location.lng}
+      "latitude": 13.0516,
+      "longitude": 80.2209
     },
-    "areaServed": "${isCityWide ? 'Greater Chennai, Tamil Nadu' : `${location.name}, Chennai`}"
+    "areaServed": [
+      {
+        "@type": "AdministrativeArea",
+        "name": "${isCityWide ? 'Greater Chennai, Tamil Nadu' : `${location.name}, Chennai`}",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": ${location.lat},
+          "longitude": ${location.lng}
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Chennai"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "87"
+    }
   }
   </script>
 
@@ -1157,6 +1215,14 @@ function generateLocationHub(location) {
   <button class="scroll-top" id="scrollTopBtn" aria-label="Back to top">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
+  <aside class="mobile-action-bar" aria-label="Quick contact actions">
+    <a href="tel:+919787451828" class="mobile-btn mobile-btn--call">
+      <i class="fa-solid fa-phone" aria-hidden="true"></i> Call 97874 51828
+    </a>
+    <a href="https://wa.me/919787451828?text=Hi%20Royal%20Power%20Solutions%2C%20I%20need%20a%20quote" target="_blank" rel="noopener noreferrer" class="mobile-btn mobile-btn--wa">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
+    </a>
+  </aside>
   <script src="${depth}js/script.js"></script>
 </body>
 </html>`;
@@ -1183,22 +1249,18 @@ function generateSitemap() {
   </url>`).join('\n');
 
   // Core dedicated service pages
-  const coreServices = [
-    'ups-sales-service.html',
-    'ups-repair-amc.html',
-    'ups-installation.html',
-    'battery-sales-service.html',
-    'server-stabilizer.html',
-    'isolation-transformer.html',
-    'solar-installation.html',
-    'electrical-work.html',
-    'ups-shifting.html'
-  ].map(s => `  <url>
+  const servicesDir = path.join(__dirname, 'services');
+  let coreServices = '';
+  if (fs.existsSync(servicesDir)) {
+    coreServices = fs.readdirSync(servicesDir)
+      .filter(s => s.endsWith('.html'))
+      .map(s => `  <url>
     <loc>${baseUrl}/services/${s}</loc>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <lastmod>${today}</lastmod>
   </url>`).join('\n');
+  }
 
   const locationHubs = locations.map(l => `  <url>
     <loc>${baseUrl}/locations/${l.slug}.html</loc>

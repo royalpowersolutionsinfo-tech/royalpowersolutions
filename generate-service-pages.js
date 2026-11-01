@@ -20,9 +20,10 @@ function navHTML() {
         <a href="../index.html" class="nav-link">Home</a>
         <a href="../about.html" class="nav-link">About Us</a>
         <a href="../services.html" class="nav-link">Services</a>
+        <a href="../projects.html" class="nav-link">Projects</a>
         <a href="../gallery.html" class="nav-link">Gallery</a>
+        <a href="../blog.html" class="nav-link">Blog</a>
         <a href="../contact.html" class="nav-link">Contact</a>
-        <a href="../locations/chennai.html" class="nav-link">Our Areas</a>
       </nav>
       <div class="nav__actions">
         <a href="tel:+919787451828" class="btn btn--ghost-nav"><i class="fa-solid fa-phone"></i> 97874 51828</a>
@@ -49,19 +50,35 @@ function footerHTML(serviceLinks) {
         </div>
       </div>
       <div class="footer__col">
-        <h4>UPS Services</h4>
+        <h4>Quick Links</h4>
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About Us</a>
+        <a href="../services.html">Services</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../gallery.html">Gallery</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Our Services</h4>
         <a href="ups-sales-service.html">UPS Sales &amp; Service</a>
         <a href="ups-repair-amc.html">UPS Repair &amp; AMC</a>
         <a href="ups-installation.html">UPS Installation</a>
-        <a href="ups-shifting.html">UPS Shifting</a>
         <a href="battery-sales-service.html">Battery Sales &amp; Service</a>
-      </div>
-      <div class="footer__col">
-        <h4>Other Services</h4>
         <a href="server-stabilizer.html">Server Stabilizers</a>
         <a href="isolation-transformer.html">Isolation Transformers</a>
         <a href="solar-installation.html">Solar Installation</a>
         <a href="electrical-work.html">Electrical Work</a>
+      </div>
+      <div class="footer__col footer__col--locations">
+        <h4>Service Areas</h4>
+        <a href="../locations/jafferkhanpet.html">Jafferkhanpet</a>
+        <a href="../locations/ashok-pillar.html">Ashok Pillar</a>
+        <a href="../locations/west-mambalam.html">West Mambalam</a>
+        <a href="../locations/guindy.html">Guindy</a>
+        <a href="../locations/saidapet.html">Saidapet</a>
+        <a href="../locations/ambattur.html">Ambattur Industrial Estate</a>
+        <a href="../locations/chennai.html">Greater Chennai</a>
       </div>
       <div class="footer__col">
         <h4>Contact Us</h4>
@@ -78,6 +95,63 @@ function footerHTML(serviceLinks) {
       </div>
     </div>
   </footer>`;
+}
+
+function brandsStripHTML() {
+  return `
+  <section class="brands-strip" aria-label="Brands we service, supply and install" data-reveal>
+    <div class="container">
+      <div class="brands-strip__header">
+        <span class="brands-badge"><i class="fa-solid fa-shield-halved"></i> 100% Genuine OEM Spares &amp; Direct Warranty</span>
+        <h2 class="brands-lead" style="font-size:clamp(1.2rem,2.2vw,1.6rem);color:var(--rps-navy);">Multi-Brand UPS Support &amp; Battery Replacement in Chennai</h2>
+        <p class="brands-sub">Authorised channels and certified service engineers for all leading Indian and international power protection brands.</p>
+      </div>
+      <div class="brands-grid">
+        <div class="brand-card"><span class="brand-card__name">APC</span><span class="brand-card__sub">by Schneider Electric</span></div>
+        <div class="brand-card"><span class="brand-card__name">VERTIV</span><span class="brand-card__sub">Liebert / Emerson</span></div>
+        <div class="brand-card"><span class="brand-card__name">NUMERIC</span><span class="brand-card__sub">Legrand Group</span></div>
+        <div class="brand-card"><span class="brand-card__name">EXIDE</span><span class="brand-card__sub">Powersafe SMF</span></div>
+        <div class="brand-card"><span class="brand-card__name">AMARON</span><span class="brand-card__sub">Quanta Industrial</span></div>
+        <div class="brand-card"><span class="brand-card__name">LUMINOUS</span><span class="brand-card__sub">Solar &amp; Commercial</span></div>
+        <div class="brand-card"><span class="brand-card__name">MICROTEK</span><span class="brand-card__sub">Online UPS Series</span></div>
+        <div class="brand-card"><span class="brand-card__name">DELTA</span><span class="brand-card__sub">Amplon / Ultron</span></div>
+      </div>
+      <div class="brands-footer-note">
+        <i class="fa-solid fa-circle-check" style="color:var(--rps-green);font-size:1.1rem;"></i>
+        <span>Every installation is backed by an <strong>Official GST Invoice</strong> (33CKUPB0081N2ZX), OEM Manufacturer Warranty &amp; Free 1st Preventive Maintenance Visit.</span>
+      </div>
+    </div>
+  </section>`;
+}
+
+function leadMagnetHTML() {
+  return `
+  <section class="lead-magnet" aria-label="Free technical guide download" data-reveal>
+    <div class="container">
+      <div class="lead-magnet__box">
+        <div class="lead-magnet__content">
+          <span class="lead-magnet__tag"><i class="fa-solid fa-file-pdf"></i> Free Engineering Resource · 2026 Edition</span>
+          <h2 class="lead-magnet__title">Chennai Industrial UPS Maintenance &amp; Sizing Checklist</h2>
+          <p class="lead-magnet__desc">Prevent costly production outages and server shutdowns. Compiled by senior electrical contractors for facility managers, IT directors, and plant engineers across Chennai.</p>
+          <ul class="lead-magnet__list">
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Battery String Torque &amp; Float Voltage Guide:</strong> Standard terminal torque specs and temperature compensation charts for Exide &amp; Amaron SMF batteries.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>DG-to-UPS Sizing Multiplier (1.5x–2.0x):</strong> Prevent generator governor hunting and frequency tripping during power transfers.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Harmonic &amp; Neutral-Earth Noise Isolation:</strong> How to maintain &lt;1.0V neutral-to-earth potential for sensitive medical and CNC machinery.</li>
+          </ul>
+        </div>
+        <div class="lead-magnet__action-card">
+          <div style="width:60px;height:60px;border-radius:14px;background:rgba(30,79,184,0.1);color:var(--rps-blue);display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin:0 auto 16px;">
+            <i class="fa-solid fa-download"></i>
+          </div>
+          <h3>Get the Free PDF Guide</h3>
+          <p>Instant PDF delivery to your WhatsApp along with a complimentary site survey assessment.</p>
+          <a href="https://wa.me/919787451828?text=Hi%20Royal%20Power%20Solutions%2C%20please%20send%20me%20the%20Free%202026%20Industrial%20UPS%20Maintenance%20%26%20Sizing%20Checklist%20PDF" target="_blank" rel="noopener noreferrer" class="btn btn--gold btn--full" style="display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 20px;font-weight:700;">
+            <i class="fa-brands fa-whatsapp" style="font-size:1.25rem;"></i> Request PDF via WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>`;
 }
 
 function ctaSection(serviceKeyword) {
@@ -135,6 +209,14 @@ function pageShell(meta, content) {
   ${footerHTML()}
   <a href="https://wa.me/919787451828" target="_blank" rel="noopener noreferrer" class="fab-wa" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
   <button class="scroll-top" id="scrollTopBtn" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <aside class="mobile-action-bar" aria-label="Quick contact actions">
+    <a href="tel:+919787451828" class="mobile-btn mobile-btn--call">
+      <i class="fa-solid fa-phone" aria-hidden="true"></i> Call 97874 51828
+    </a>
+    <a href="https://wa.me/919787451828?text=Hi%20Royal%20Power%20Solutions%2C%20I%20need%20a%20quote" target="_blank" rel="noopener noreferrer" class="mobile-btn mobile-btn--wa">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
+    </a>
+  </aside>
   <script src="../js/script.js"></script>
 </body>
 </html>`;
@@ -281,6 +363,9 @@ const pages = [
     </div>
   </section>
 
+  ${brandsStripHTML()}
+  ${leadMagnetHTML()}
+
   ${faqSection('UPS Repair & AMC Questions', [
     {q:'Do you repair all brands of UPS in Chennai?', a:'Yes. We repair all major brands — APC, Emerson, Liebert, Numeric, Luminous, Sukam, Microtek, Delta and more — regardless of where they were purchased.'},
     {q:'What does a UPS AMC include?', a:'Our AMC includes quarterly PM visits, battery health checks, cleaning, inspection, emergency call-outs with priority response, and detailed service reports. Basic plans start from ₹2,999/year.'},
@@ -360,6 +445,8 @@ const pages = [
     </div>
   </section>
 
+  ${brandsStripHTML()}
+
   ${faqSection('UPS Installation Questions', [
     {q:'How long does UPS installation take?', a:'A 1–10KVA installation typically takes 2–4 hours. Larger 50–100KVA systems take a full day. Industrial 200KVA+ systems may take 2–3 days including commissioning.'},
     {q:'Do you provide a commissioning certificate?', a:'Yes. After installation we perform full load testing and provide a commissioning report required for the manufacturer warranty to be valid.'},
@@ -435,6 +522,8 @@ const pages = [
       </div>
     </div>
   </section>
+
+  ${brandsStripHTML()}
 
   ${faqSection('UPS Battery Questions', [
     {q:'Which battery brands do you stock in Chennai?', a:'We stock Amron, Exide, Luminous, Okaya and Sukam VRLA batteries, plus Lithium Ion LiFePO4 battery packs. All are original, sourced from authorised distributors with manufacturer warranty.'},

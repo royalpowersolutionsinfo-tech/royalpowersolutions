@@ -211,6 +211,7 @@
     }
     .compare-table {
       width: 100%;
+      min-width: 540px;
       border-collapse: collapse;
       font-size: 0.94rem;
       background: #fff;
@@ -325,6 +326,22 @@
       background: var(--bg-soft);
       padding: 60px 0;
       border-top: 1px solid rgba(30,79,184,0.08);
+    }
+
+    @media (max-width: 768px) {
+      .case-wrapper { padding: 40px 0 60px; }
+      .sidebar-card { position: static; top: auto; padding: 22px 18px; margin-top: 24px; }
+      .testimonial-card { padding: 24px 18px; }
+      .testimonial-card::before { display: none; }
+      .callout-box, .problem-box { padding: 16px 18px; }
+    }
+
+    @media (max-width: 480px) {
+      .stat-strip { grid-template-columns: 1fr; }
+      .stat-card { padding: 16px 14px; }
+      .stat-card__number { font-size: 1.8rem; }
+      .testimonial-author { gap: 12px; }
+      .testimonial-avatar { width: 44px; height: 44px; font-size: 1.1rem; }
     }
   </style>
 </head>
@@ -858,5 +875,14 @@
     <i class="fa-solid fa-arrow-up"></i>
   </button>
   <script src="../js/script.js"></script>
+  <!-- Mobile Sticky Bottom Action Bar -->
+  <aside class="mobile-action-bar" aria-label="Quick contact actions">
+    <a href="tel:+919787451828" class="mobile-btn mobile-btn--call">
+      <i class="fa-solid fa-phone" aria-hidden="true"></i> Call 97874 51828
+    </a>
+    <a href="https://wa.me/919787451828?text=Hi%20Royal%20Power%20Solutions%2C%20I%20need%20service%20in%20Chennai" target="_blank" rel="noopener noreferrer" class="mobile-btn mobile-btn--wa">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
+    </a>
+  </aside>
 </body>
 </html>

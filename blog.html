@@ -104,7 +104,7 @@
     .blog-section { padding: 60px 0 80px; }
     .blog-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
       gap: 28px;
       margin-bottom: 50px;
     }
@@ -207,6 +207,16 @@
       .blog-card--featured .featured-visual { min-height: 160px; font-size: 4rem; }
       .blog-card--featured .blog-card__body { padding: 24px; }
       .blog-grid { grid-template-columns: 1fr; }
+    }
+    @media(max-width: 640px) {
+      .blog-hero { padding: 100px 0 40px; }
+      .blog-hero h1 { font-size: clamp(1.6rem, 5vw, 2.2rem); }
+      .blog-hero p { font-size: 0.95rem; }
+      .blog-card__body { padding: 20px 18px 16px; }
+      .blog-card__footer { padding: 14px 18px; }
+      .blog-cta { padding: 32px 18px; }
+      .filter-btn { padding: 6px 14px; font-size: 0.8rem; }
+      .blog-filter__inner { gap: 8px; justify-content: center; }
     }
   </style>
 </head>
@@ -534,6 +544,7 @@
       <a href="locations/west-mambalam.html">West Mambalam</a>
       <a href="locations/guindy.html">Guindy</a>
       <a href="locations/saidapet.html">Saidapet</a>
+      <a href="locations/ambattur.html">Ambattur</a>
       <a href="locations/chennai.html">Greater Chennai</a>
     </div>
 

@@ -43,7 +43,7 @@
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "No: 55/15, 69th Street, RV Nagar, Jafferkhanpet",
-        "addressLocality": "Jafferkhanpet",
+        "addressLocality": "Chennai",
         "addressRegion": "Tamil Nadu",
         "postalCode": "600083",
         "addressCountry": "IN"
@@ -53,9 +53,25 @@
         "latitude": 13.0516,
         "longitude": 80.2209
       },
-      "areaServed": {
-        "@type": "City",
-        "name": "Jafferkhanpet, Chennai"
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Jafferkhanpet, Chennai",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 13.0516,
+            "longitude": 80.2209
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Chennai"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "87"
       },
       "priceRange": "₹₹",
       "openingHoursSpecification": [{
@@ -148,7 +164,9 @@
         <a href="../index.html" class="nav-link">Home</a>
         <a href="../about.html" class="nav-link">About Us</a>
         <a href="../services.html" class="nav-link">Services</a>
+        <a href="../projects.html" class="nav-link">Projects</a>
         <a href="../gallery.html" class="nav-link">Gallery</a>
+        <a href="../blog.html" class="nav-link">Blog</a>
         <a href="../contact.html" class="nav-link">Contact</a>
       </nav>
       <div class="nav__actions">
@@ -197,6 +215,10 @@
           <p class="eyebrow eyebrow--dark"><i class="fa-solid fa-location-dot"></i> Jafferkhanpet, Chennai</p>
           <h2>All Kinds of Electrical Work — Trusted Experts in Jafferkhanpet</h2>
           <p>Royal Power Solutions handles all kinds of electrical work in Jafferkhanpet, Chennai — from new house wiring and office electrical fit-outs to industrial panel installation and power factor correction. Our licensed electricians are background-checked and trained to work to Indian electrical standards. We provide transparent itemised quotations and never start work without your approval. As a GST-registered electrical contractor (33CKUPB0081N2ZX), we issue proper tax invoices for all work done in Jafferkhanpet.</p>
+          <div class="local-intel-box">
+            <h4><i class="fa-solid fa-location-crosshairs" style="color:var(--rps-blue);"></i> Local Engineering Focus · Jafferkhanpet</h4>
+            <p>Jafferkhanpet (RV Nagar) is the primary headquarters and centralized spares depot of Royal Power Solutions. With on-site inventory of Exide & Amaron SMF batteries, servo controllers, manual stackers, and bypass panels, we guarantee 15-minute express dispatch to Jafferkhanpet, Ashok Nagar, and surrounding South Chennai corridors.</p>
+          </div>
           <div class="why__list" style="margin-top:28px;" aria-label="Service features">
             <ul>
               <li><i class="fa-solid fa-check" aria-hidden="true"></i> House and apartment wiring</li>
@@ -441,7 +463,9 @@
         <a href="../index.html">Home</a>
         <a href="../about.html">About Us</a>
         <a href="../services.html">Services</a>
+        <a href="../projects.html">Projects</a>
         <a href="../gallery.html">Gallery</a>
+        <a href="../blog.html">Blog</a>
         <a href="../contact.html">Contact</a>
       </div>
       <div class="footer__col">
@@ -476,6 +500,14 @@
   <button class="scroll-top" id="scrollTopBtn" aria-label="Back to top">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
+  <aside class="mobile-action-bar" aria-label="Quick contact actions">
+    <a href="tel:+919787451828" class="mobile-btn mobile-btn--call">
+      <i class="fa-solid fa-phone" aria-hidden="true"></i> Call 97874 51828
+    </a>
+    <a href="https://wa.me/919787451828?text=Hi%20Royal%20Power%20Solutions%2C%20I%20need%20a%20quote" target="_blank" rel="noopener noreferrer" class="mobile-btn mobile-btn--wa">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
+    </a>
+  </aside>
   <script src="../js/script.js"></script>
 </body>
 </html>

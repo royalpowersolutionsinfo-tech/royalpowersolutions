@@ -228,6 +228,11 @@
         grid-template-columns: repeat(2, 1fr);
       }
     }
+    @media (max-width: 480px) {
+      .metric-grid {
+        grid-template-columns: 1fr;
+      }
+    }
     .metric-card {
       background: var(--bg-soft);
       border: 1px solid var(--border-light);
@@ -269,6 +274,7 @@
     }
     .specs-table {
       width: 100%;
+      min-width: 540px;
       border-collapse: collapse;
       font-size: 0.96rem;
       text-align: left;
@@ -1039,5 +1045,14 @@
   </button>
 
   <script src="../js/script.js"></script>
+  <!-- Mobile Sticky Bottom Action Bar -->
+  <aside class="mobile-action-bar" aria-label="Quick contact actions">
+    <a href="tel:+919787451828" class="mobile-btn mobile-btn--call">
+      <i class="fa-solid fa-phone" aria-hidden="true"></i> Call 97874 51828
+    </a>
+    <a href="https://wa.me/919787451828?text=Hi%20Royal%20Power%20Solutions%2C%20I%20need%20service%20in%20Chennai" target="_blank" rel="noopener noreferrer" class="mobile-btn mobile-btn--wa">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
+    </a>
+  </aside>
 </body>
 </html>
